@@ -1,0 +1,42 @@
+{
+	"name": "amalfi",
+	"version": "1.0.0",
+	"description": "Amalfi WordPress Theme",
+	"author": "ThemeZee",
+	"license": "GPL-2.0-or-later",
+	"devDependencies": {
+		"@apidevtools/json-schema-ref-parser": "^15.5.1",
+		"@testing-library/dom": "^10.4.2",
+		"@testing-library/jest-dom": "^6.9.1",
+		"@testing-library/react": "^16.3.3",
+		"@testing-library/user-event": "^14.6.10",
+		"@types/jest": "^29.5.14",
+		"@wordpress/api-fetch": "7.40.1",
+		"@wordpress/components": "32.2.1",
+		"@wordpress/dom-ready": "4.40.1",
+		"@wordpress/element": "6.40.1",
+		"@wordpress/i18n": "6.13.1",
+		"@wordpress/scripts": "wp-7.0",
+		"ajv": "^8.20.0",
+		"copy-webpack-plugin": "^14.0.0",
+		"jsonfile": "^6.2.1",
+		"typescript": "5.3.3"
+	},
+	"scripts": {
+		"build": "wp-scripts build",
+		"check-types": "tsc --noEmit",
+		"format": "wp-scripts format *.{js,json} ./resources/**/*.{ts,tsx,json,scss} ./theme-json/**/*.{js,json}",
+		"lint": "npm run lint:js && npm run lint:css",
+		"lint:js": "wp-scripts lint-js --ext .js,.jsx,.ts,.tsx resources/ts tests/ts",
+		"lint:js:fix": "wp-scripts lint-js --ext .js,.jsx,.ts,.tsx --fix resources/ts tests/ts",
+		"lint:css": "wp-scripts lint-style \"resources/**/*.scss\"",
+		"lint:css:fix": "wp-scripts lint-style --fix \"resources/**/*.scss\"",
+		"start": "wp-scripts start",
+		"test": "wp-scripts test-unit-js",
+		"test:watch": "wp-scripts test-unit-js --watch",
+		"prebuild": "npm run theme-json",
+		"theme-json": "npm run build-theme-json && npm run validate-theme-json",
+		"build-theme-json": "node ./bin/theme-json.js --theme-json-dir ./theme-json && wp-scripts format ./theme.json",
+		"validate-theme-json": "node ./bin/validate-theme-json.js ./theme.json https://schemas.wp.org/trunk/theme.json"
+	}
+}

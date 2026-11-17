@@ -1,0 +1,54 @@
+{
+	"name": "themezee/amalfi",
+	"type": "wordpress-theme",
+	"description": "The Amalfi WordPress Theme",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "ThemeZee",
+			"email": "contact@themezee.com",
+			"homepage": "https://themezee.com/",
+			"role": "Company"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"ThemeZee\\Amalfi\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"ThemeZee\\Amalfi\\Tests\\": "tests/php/"
+		}
+	},
+	"require": {
+		"php": ">=8.1",
+		"themezee/packable": "^1.0"
+	},
+	"require-dev": {
+		"wp-coding-standards/wpcs": "^3.4",
+		"phpunit/phpunit": "^11.5",
+		"brain/monkey": "^2.6",
+		"mockery/mockery": "^1.6",
+		"phpstan/phpstan": "^2.1",
+		"szepeviktor/phpstan-wordpress": "^2.0"
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"scripts": {
+		"phpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
+		"phpcbf": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf",
+		"phpstan": "@php ./vendor/phpstan/phpstan/phpstan analyse",
+		"test": "@php ./vendor/phpunit/phpunit/phpunit",
+		"qa": [
+			"@phpcs",
+			"@phpstan",
+			"@test"
+		]
+	}
+}
