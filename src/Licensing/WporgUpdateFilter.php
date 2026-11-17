@@ -2,12 +2,12 @@
 /**
  * WordPress.org update-check filter.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Licensing;
+namespace ThemeZee\Rosalie\Licensing;
 
 /**
  * Removes this theme from the wp.org theme update check, so updates come from

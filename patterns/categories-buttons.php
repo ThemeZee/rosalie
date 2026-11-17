@@ -1,16 +1,16 @@
 <?php
 /**
  * Title: Categories (Buttons)
- * Slug: amalfi/categories-buttons
- * Categories: amalfi_categories
+ * Slug: rosalie/categories-buttons
+ * Categories: rosalie_categories
  *
- * @package Amalfi
+ * @package Rosalie
  */
 
 ?>
 
-<!-- wp:group {"align":"wide","className":"amalfi-section","style":{"border":{"top":{"color":"var:preset|color|primary-200","width":"1px"}},"spacing":{"padding":{"top":"var:preset|spacing|1000","bottom":"var:preset|spacing|1000"},"blockGap":"var:preset|spacing|500"}},"layout":{"type":"constrained","contentSize":"720px","wideSize":"720px"}} -->
-<div class="wp-block-group alignwide amalfi-section" style="border-top-color:var(--wp--preset--color--primary-200);border-top-width:1px;padding-top:var(--wp--preset--spacing--1000);padding-bottom:var(--wp--preset--spacing--1000)">
+<!-- wp:group {"align":"wide","className":"rosalie-section","style":{"border":{"top":{"color":"var:preset|color|primary-200","width":"1px"}},"spacing":{"padding":{"top":"var:preset|spacing|1000","bottom":"var:preset|spacing|1000"},"blockGap":"var:preset|spacing|500"}},"layout":{"type":"constrained","contentSize":"720px","wideSize":"720px"}} -->
+<div class="wp-block-group alignwide rosalie-section" style="border-top-color:var(--wp--preset--color--primary-200);border-top-width:1px;padding-top:var(--wp--preset--spacing--1000);padding-bottom:var(--wp--preset--spacing--1000)">
 
 	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|150"}},"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group">

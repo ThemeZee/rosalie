@@ -2,12 +2,12 @@
 /**
  * Demo content importer.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\DemoContent;
+namespace ThemeZee\Rosalie\DemoContent;
 
 use Throwable;
 
@@ -39,27 +39,27 @@ class Importer {
 		return array(
 			array(
 				'key'   => 'posts',
-				'label' => __( 'Blog Posts', 'amalfi' ),
+				'label' => __( 'Blog Posts', 'rosalie' ),
 				'count' => count( $this->content->postDefinitions() ),
 			),
 			array(
 				'key'   => 'categories',
-				'label' => __( 'Categories', 'amalfi' ),
+				'label' => __( 'Categories', 'rosalie' ),
 				'count' => count( $this->content->categoryNames() ),
 			),
 			array(
 				'key'   => 'tags',
-				'label' => __( 'Tags', 'amalfi' ),
+				'label' => __( 'Tags', 'rosalie' ),
 				'count' => count( $this->content->tagNames() ),
 			),
 			array(
 				'key'   => 'image',
-				'label' => __( 'Featured Images', 'amalfi' ),
+				'label' => __( 'Featured Images', 'rosalie' ),
 				'count' => count( $this->content->imageFiles() ),
 			),
 			array(
 				'key'   => 'pages',
-				'label' => __( 'Static Pages', 'amalfi' ),
+				'label' => __( 'Static Pages', 'rosalie' ),
 				'count' => count( $this->content->pageDefinitions() ),
 			),
 		);
@@ -141,7 +141,7 @@ class Importer {
 				'label'   => $label,
 				'status'  => 'success',
 				/* translators: %s: the imported content type, e.g. Categories. */
-				'message' => sprintf( __( '%s imported successfully.', 'amalfi' ), $label ),
+				'message' => sprintf( __( '%s imported successfully.', 'rosalie' ), $label ),
 			);
 
 			return $value;
@@ -151,7 +151,7 @@ class Importer {
 				'label'   => $label,
 				'status'  => 'error',
 				/* translators: %s: the content type that failed to import, e.g. Categories. */
-				'message' => sprintf( __( '%s could not be imported.', 'amalfi' ), $label ),
+				'message' => sprintf( __( '%s could not be imported.', 'rosalie' ), $label ),
 			);
 
 			return $fallback;

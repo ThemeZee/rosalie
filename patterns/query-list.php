@@ -1,11 +1,11 @@
 <?php
 /**
  * Title: Query (List)
- * Slug: amalfi/query-list
+ * Slug: rosalie/query-list
  * Block Types: core/query
- * Categories: amalfi_query_loops
+ * Categories: rosalie_query_loops
  *
- * @package Amalfi
+ * @package Rosalie
  */
 
 ?>

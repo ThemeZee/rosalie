@@ -2,12 +2,12 @@
 /**
  * Theme settings repository.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Core;
+namespace ThemeZee\Rosalie\Core;
 
 /**
  * Reads and writes the theme settings option.
@@ -74,7 +74,7 @@ class SettingsRepository {
 	public function licenseKey(): string {
 		$settings = $this->all();
 
-		return isset( $settings['amalfi_license_key'] ) ? trim( (string) $settings['amalfi_license_key'] ) : '';
+		return isset( $settings['rosalie_license_key'] ) ? trim( (string) $settings['rosalie_license_key'] ) : '';
 	}
 
 	/**
@@ -83,7 +83,7 @@ class SettingsRepository {
 	public function licenseStatus(): string {
 		$settings = $this->all();
 
-		return isset( $settings['amalfi_license_status'] ) ? (string) $settings['amalfi_license_status'] : self::STATUS_INACTIVE;
+		return isset( $settings['rosalie_license_status'] ) ? (string) $settings['rosalie_license_status'] : self::STATUS_INACTIVE;
 	}
 
 	/**
@@ -102,8 +102,8 @@ class SettingsRepository {
 	public function storeLicense( string $key, string $status ): void {
 		$this->save(
 			array(
-				'amalfi_license_key'    => $key,
-				'amalfi_license_status' => $status,
+				'rosalie_license_key'    => $key,
+				'rosalie_license_status' => $status,
 			)
 		);
 	}
@@ -114,8 +114,8 @@ class SettingsRepository {
 	public function clearLicense(): void {
 		$this->save(
 			array(
-				'amalfi_license_key'    => '',
-				'amalfi_license_status' => self::STATUS_INACTIVE,
+				'rosalie_license_key'    => '',
+				'rosalie_license_status' => self::STATUS_INACTIVE,
 			)
 		);
 	}
@@ -127,8 +127,8 @@ class SettingsRepository {
 	 */
 	private function defaults(): array {
 		return array(
-			'amalfi_license_key'    => '',
-			'amalfi_license_status' => self::STATUS_INACTIVE,
+			'rosalie_license_key'    => '',
+			'rosalie_license_status' => self::STATUS_INACTIVE,
 		);
 	}
 }

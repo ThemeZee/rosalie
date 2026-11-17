@@ -2,15 +2,15 @@
 /**
  * Licensing module.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Licensing;
+namespace ThemeZee\Rosalie\Licensing;
 
-use ThemeZee\Amalfi\Core\SettingsRepository;
-use ThemeZee\Amalfi\Core\ThemeConfig;
+use ThemeZee\Rosalie\Core\SettingsRepository;
+use ThemeZee\Rosalie\Core\ThemeConfig;
 use ThemeZee\Packable\Module\ExecutableModule;
 use ThemeZee\Packable\Module\ModuleClassNameIdTrait;
 use ThemeZee\Packable\Module\ServiceModule;

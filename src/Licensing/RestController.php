@@ -2,14 +2,14 @@
 /**
  * License REST controller.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Licensing;
+namespace ThemeZee\Rosalie\Licensing;
 
-use ThemeZee\Amalfi\Core\ThemeConfig;
+use ThemeZee\Rosalie\Core\ThemeConfig;
 use WP_REST_Request;
 use WP_REST_Response;
 use WP_REST_Server;

@@ -2,18 +2,18 @@
 /**
  * Base test case for the Amalfi unit tests.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Tests;
+namespace ThemeZee\Rosalie\Tests;
 
 use Brain\Monkey;
 use Brain\Monkey\Functions;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
-use ThemeZee\Amalfi\Core\ThemeConfig;
+use ThemeZee\Rosalie\Core\ThemeConfig;
 
 /**
  * Sets up Brain Monkey (WordPress function mocking) and stubs the common
@@ -59,12 +59,12 @@ abstract class TestCase extends PHPUnitTestCase {
 	protected function themeConfig( array $overrides = array() ): ThemeConfig {
 		$args = array_merge(
 			array(
-				'name'       => 'Amalfi',
-				'slug'       => 'amalfi',
+				'name'       => 'Rosalie',
+				'slug'       => 'rosalie',
 				'version'    => '1.0.0',
 				'author'     => 'ThemeZee',
-				'textDomain' => 'amalfi',
-				'basePath'   => '/var/www/themes/amalfi',
+				'textDomain' => 'rosalie',
+				'basePath'   => '/var/www/themes/rosalie',
 				'itemId'     => 123,
 				'storeUrl'   => 'https://store.test',
 			),

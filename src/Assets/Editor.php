@@ -2,12 +2,12 @@
 /**
  * Editor asset handling.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Assets;
+namespace ThemeZee\Rosalie\Assets;
 
 /**
  * Registers the block editor stylesheet.

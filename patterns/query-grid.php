@@ -1,11 +1,11 @@
 <?php
 /**
  * Title: Query (Grid)
- * Slug: amalfi/query-grid
+ * Slug: rosalie/query-grid
  * Block Types: core/query
- * Categories: amalfi_query_loops
+ * Categories: rosalie_query_loops
  *
- * @package Amalfi
+ * @package Rosalie
  */
 
 ?>

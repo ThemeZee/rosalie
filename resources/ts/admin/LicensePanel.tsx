@@ -66,7 +66,10 @@ export default function LicensePanel( {
 				message:
 					error instanceof Error
 						? error.message
-						: __( 'The request could not be completed.', 'amalfi' ),
+						: __(
+								'The request could not be completed.',
+								'rosalie'
+						  ),
 			} );
 		} finally {
 			setIsBusy( false );
@@ -74,29 +77,29 @@ export default function LicensePanel( {
 	};
 
 	return (
-		<div className="amalfi-theme-setup__section">
-			<p className="amalfi-theme-setup__hint">
+		<div className="rosalie-theme-setup__section">
+			<p className="rosalie-theme-setup__hint">
 				{ state.active
-					? __( 'You are receiving updates.', 'amalfi' )
+					? __( 'You are receiving updates.', 'rosalie' )
 					: __(
 							'An active license key is needed to install updates and receive support.',
-							'amalfi'
+							'rosalie'
 					  ) }
 			</p>
 			<BaseControl
 				__nextHasNoMarginBottom
-				id="amalfi-license-status"
-				className="amalfi-license-status"
-				label={ __( 'License Status', 'amalfi' ) }
+				id="rosalie-license-status"
+				className="rosalie-license-status"
+				label={ __( 'License Status', 'rosalie' ) }
 			>
 				<span
-					className={ `amalfi-license-badge amalfi-license-badge--${
+					className={ `rosalie-license-badge rosalie-license-badge--${
 						state.active ? 'active' : 'inactive'
 					}` }
 				>
 					{ state.active
-						? __( 'Active', 'amalfi' )
-						: __( 'Inactive', 'amalfi' ) }
+						? __( 'Active', 'rosalie' )
+						: __( 'Inactive', 'rosalie' ) }
 				</span>
 			</BaseControl>
 
@@ -104,7 +107,7 @@ export default function LicensePanel( {
 				<>
 					<TextControl
 						__nextHasNoMarginBottom
-						label={ __( 'License Key', 'amalfi' ) }
+						label={ __( 'License Key', 'rosalie' ) }
 						value={ state.keyMasked }
 						onChange={ () => undefined }
 						readOnly
@@ -112,7 +115,7 @@ export default function LicensePanel( {
 					/>
 					<Flex
 						justify="flex-start"
-						className="amalfi-theme-setup__actions"
+						className="rosalie-theme-setup__actions"
 					>
 						<Button
 							variant="secondary"
@@ -124,8 +127,8 @@ export default function LicensePanel( {
 							__next40pxDefaultSize
 						>
 							{ isBusy
-								? __( 'Working…', 'amalfi' )
-								: __( 'Deactivate License', 'amalfi' ) }
+								? __( 'Working…', 'rosalie' )
+								: __( 'Deactivate License', 'rosalie' ) }
 						</Button>
 						{ isBusy && <Spinner /> }
 					</Flex>
@@ -134,14 +137,17 @@ export default function LicensePanel( {
 				<>
 					<TextControl
 						__nextHasNoMarginBottom
-						label={ __( 'License Key', 'amalfi' ) }
+						label={ __( 'License Key', 'rosalie' ) }
 						value={ key }
 						onChange={ setKey }
-						placeholder={ __( 'Enter your license key', 'amalfi' ) }
+						placeholder={ __(
+							'Enter your license key',
+							'rosalie'
+						) }
 					/>
 					<Flex
 						justify="flex-start"
-						className="amalfi-theme-setup__actions"
+						className="rosalie-theme-setup__actions"
 					>
 						<Button
 							variant="primary"
@@ -152,8 +158,8 @@ export default function LicensePanel( {
 							__next40pxDefaultSize
 						>
 							{ isBusy
-								? __( 'Activating…', 'amalfi' )
-								: __( 'Activate License', 'amalfi' ) }
+								? __( 'Activating…', 'rosalie' )
+								: __( 'Activate License', 'rosalie' ) }
 						</Button>
 						{ isBusy && <Spinner /> }
 					</Flex>
@@ -164,7 +170,7 @@ export default function LicensePanel( {
 				<Notice
 					status={ notice.status }
 					onRemove={ () => setNotice( null ) }
-					className="amalfi-theme-setup__notice"
+					className="rosalie-theme-setup__notice"
 				>
 					{ notice.message }
 				</Notice>

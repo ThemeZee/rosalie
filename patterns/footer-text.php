@@ -1,10 +1,10 @@
 <?php
 /**
  * Title: Footer Text
- * Slug: amalfi/footer-text
+ * Slug: rosalie/footer-text
  * Inserter: no
  *
- * @package Amalfi
+ * @package Rosalie
  */
 
 ?>
@@ -14,5 +14,5 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"fontSize":"body-sm"} -->
-<p class="has-body-sm-font-size"><a href="#"><?php esc_html_e( 'Privacy Policy', 'amalfi' ); ?></a> &middot; <a href="#"><?php esc_html_e( 'Imprint', 'amalfi' ); ?></a></p>
+<p class="has-body-sm-font-size"><a href="#"><?php esc_html_e( 'Privacy Policy', 'rosalie' ); ?></a> &middot; <a href="#"><?php esc_html_e( 'Imprint', 'rosalie' ); ?></a></p>
 <!-- /wp:paragraph -->

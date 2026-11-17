@@ -2,12 +2,12 @@
 /**
  * Core module.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Core;
+namespace ThemeZee\Rosalie\Core;
 
 use ThemeZee\Packable\Module\ModuleClassNameIdTrait;
 use ThemeZee\Packable\Module\ServiceModule;

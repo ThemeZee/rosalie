@@ -1,15 +1,15 @@
 <?php
 /**
  * Title: Contact us
- * Slug: amalfi/contact-us
- * Categories: amalfi_about
+ * Slug: rosalie/contact-us
+ * Categories: rosalie_about
  *
- * @package Amalfi
+ * @package Rosalie
  */
 
 ?>
 
-<!-- wp:group {"metadata":{"categories":["amalfi_about"],"patternName":"amalfi/contact-us","name":"Contact us"},"layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"categories":["rosalie_about"],"patternName":"rosalie/contact-us","name":"Contact us"},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group">
 
 	<!-- wp:paragraph {"style":{"typography":{"fontStyle":"italic","fontWeight":"400"}},"fontSize":"body-xl"} -->

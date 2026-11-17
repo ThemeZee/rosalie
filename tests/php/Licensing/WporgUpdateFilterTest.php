@@ -2,23 +2,23 @@
 /**
  * Tests for the WordPress.org update-check filter.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Tests\Licensing;
+namespace ThemeZee\Rosalie\Tests\Licensing;
 
 use Brain\Monkey\Functions;
-use ThemeZee\Amalfi\Licensing\WporgUpdateFilter;
-use ThemeZee\Amalfi\Tests\TestCase;
+use ThemeZee\Rosalie\Licensing\WporgUpdateFilter;
+use ThemeZee\Rosalie\Tests\TestCase;
 
 final class WporgUpdateFilterTest extends TestCase {
 
 	private const UPDATE_URL = 'https://api.wordpress.org/themes/update-check/1.1/';
 
 	public function test_leaves_unrelated_requests_untouched(): void {
-		$args   = array( 'body' => array( 'themes' => '{"themes":{"amalfi":{}}}' ) );
+		$args   = array( 'body' => array( 'themes' => '{"themes":{"rosalie":{}}}' ) );
 		$filter = new WporgUpdateFilter();
 
 		$this->assertSame(
@@ -36,7 +36,7 @@ final class WporgUpdateFilterTest extends TestCase {
 
 	public function test_strips_the_active_parent_and_child_theme(): void {
 		Functions\when( 'get_option' )->alias(
-			static fn( $name ) => 'template' === $name ? 'amalfi' : 'amalfi-child'
+			static fn( $name ) => 'template' === $name ? 'rosalie' : 'rosalie-child'
 		);
 		Functions\when( 'wp_json_encode' )->alias(
 			static fn( $data ) => json_encode( $data )
@@ -47,8 +47,8 @@ final class WporgUpdateFilterTest extends TestCase {
 				'themes' => json_encode(
 					array(
 						'themes' => array(
-							'amalfi'       => array( 'Name' => 'Amalfi' ),
-							'amalfi-child' => array( 'Name' => 'Amalfi Child' ),
+							'rosalie'       => array( 'Name' => 'Rosalie' ),
+							'rosalie-child' => array( 'Name' => 'Rosalie Child' ),
 							'twentytwenty' => array( 'Name' => 'Twenty Twenty' ),
 						),
 					)
@@ -59,8 +59,8 @@ final class WporgUpdateFilterTest extends TestCase {
 		$result = ( new WporgUpdateFilter() )( $args, self::UPDATE_URL );
 		$themes = json_decode( $result['body']['themes'], true )['themes'];
 
-		$this->assertArrayNotHasKey( 'amalfi', $themes );
-		$this->assertArrayNotHasKey( 'amalfi-child', $themes );
+		$this->assertArrayNotHasKey( 'rosalie', $themes );
+		$this->assertArrayNotHasKey( 'rosalie-child', $themes );
 		$this->assertArrayHasKey( 'twentytwenty', $themes );
 	}
 }

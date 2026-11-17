@@ -2,16 +2,16 @@
 /**
  * Admin module.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Admin;
+namespace ThemeZee\Rosalie\Admin;
 
-use ThemeZee\Amalfi\Core\ThemeConfig;
-use ThemeZee\Amalfi\DemoContent\Importer;
-use ThemeZee\Amalfi\Licensing\LicenseClient;
+use ThemeZee\Rosalie\Core\ThemeConfig;
+use ThemeZee\Rosalie\DemoContent\Importer;
+use ThemeZee\Rosalie\Licensing\LicenseClient;
 use ThemeZee\Packable\Module\ExecutableModule;
 use ThemeZee\Packable\Module\ModuleClassNameIdTrait;
 use ThemeZee\Packable\Module\ServiceModule;

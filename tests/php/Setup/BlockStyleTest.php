@@ -2,16 +2,16 @@
 /**
  * Tests for block style registration.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Tests\Setup;
+namespace ThemeZee\Rosalie\Tests\Setup;
 
 use Brain\Monkey\Functions;
-use ThemeZee\Amalfi\Setup\BlockStyle;
-use ThemeZee\Amalfi\Tests\TestCase;
+use ThemeZee\Rosalie\Setup\BlockStyle;
+use ThemeZee\Rosalie\Tests\TestCase;
 
 final class BlockStyleTest extends TestCase {
 

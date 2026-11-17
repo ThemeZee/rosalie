@@ -1,6 +1,6 @@
-=== Amalfi ===
+=== Rosalie ===
 Author URI: https://themezee.com/
-Theme URI: https://themezee.com/themes/amalfi/
+Theme URI: https://themezee.com/themes/rosalie/
 Contributors: themezee
 Tags: full-site-editing, template-editing, one-column, blog, portfolio, custom-background, custom-logo, custom-header, custom-menu, grid-layout, education, editor-style, wide-blocks, block-styles, block-patterns, rtl-language-support, right-sidebar, news, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, footer-widgets, translation-ready, theme-options, two-columns, three-columns
 Requires at least: 7.1
@@ -9,16 +9,16 @@ Requires PHP: 8.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Amalfi is an elegant magazine and blog theme with refined typography and a flexible, pattern-based layout.
+Rosalie is an elegant magazine and blog theme with refined typography and a flexible, pattern-based layout.
 
 == Description ==
 
-Amalfi is an elegant magazine and blog theme with refined typography and a flexible, pattern-based layout, built entirely on WordPress core blocks and full site editing. Its large collection of block patterns suits travel blogs, agencies and lifestyle magazines, letting you assemble feature-rich pages and post layouts in a few clicks.
+Rosalie is an elegant magazine and blog theme with refined typography and a flexible, pattern-based layout, built entirely on WordPress core blocks and full site editing. Its large collection of block patterns suits travel blogs, agencies and lifestyle magazines, letting you assemble feature-rich pages and post layouts in a few clicks.
 
 == Copyright ==
 
-Amalfi WordPress Theme, Copyright 2026 ThemeZee.com
-Amalfi is distributed under the terms of the GNU GPL
+Rosalie WordPress Theme, Copyright 2026 ThemeZee.com
+Rosalie is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -32,7 +32,7 @@ GNU General Public License for more details.
 
 == Resources ==
 
-Amalfi bundles and uses the following third-party resources:
+Rosalie bundles and uses the following third-party resources:
 
 1. Fonts
 

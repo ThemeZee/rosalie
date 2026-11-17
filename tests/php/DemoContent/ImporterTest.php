@@ -2,18 +2,18 @@
 /**
  * Tests for the demo content Importer.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Tests\DemoContent;
+namespace ThemeZee\Rosalie\Tests\DemoContent;
 
 use Brain\Monkey\Functions;
 use Mockery;
-use ThemeZee\Amalfi\DemoContent\Content;
-use ThemeZee\Amalfi\DemoContent\Importer;
-use ThemeZee\Amalfi\Tests\TestCase;
+use ThemeZee\Rosalie\DemoContent\Content;
+use ThemeZee\Rosalie\DemoContent\Importer;
+use ThemeZee\Rosalie\Tests\TestCase;
 use WP_Error;
 
 final class ImporterTest extends TestCase {

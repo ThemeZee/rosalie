@@ -13,21 +13,21 @@ import LicensePanel from './LicensePanel';
 import type { ThemeSetupBootstrap } from './types';
 
 export default function App() {
-	const bootstrap: ThemeSetupBootstrap = window.amalfiThemeSetup || {};
-	const restNamespace = bootstrap.restNamespace || 'amalfi/v1';
+	const bootstrap: ThemeSetupBootstrap = window.rosalieThemeSetup || {};
+	const restNamespace = bootstrap.restNamespace || 'rosalie/v1';
 
 	return (
-		<div className="amalfi-theme-setup__columns">
-			<section className="amalfi-theme-setup__group">
-				<h3>{ __( 'Demo Content', 'amalfi' ) }</h3>
+		<div className="rosalie-theme-setup__columns">
+			<section className="rosalie-theme-setup__group">
+				<h3>{ __( 'Demo Content', 'rosalie' ) }</h3>
 				<DemoContentPanel
 					parts={ bootstrap.demoParts || [] }
 					restNamespace={ restNamespace }
 				/>
 			</section>
 
-			<section className="amalfi-theme-setup__group">
-				<h3>{ __( 'License Settings', 'amalfi' ) }</h3>
+			<section className="rosalie-theme-setup__group">
+				<h3>{ __( 'License Settings', 'rosalie' ) }</h3>
 				<LicensePanel
 					initialState={ bootstrap.license || {} }
 					restNamespace={ restNamespace }

@@ -2,15 +2,15 @@
 /**
  * Theme license client.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Licensing;
+namespace ThemeZee\Rosalie\Licensing;
 
-use ThemeZee\Amalfi\Core\SettingsRepository;
-use ThemeZee\Amalfi\Core\ThemeConfig;
+use ThemeZee\Rosalie\Core\SettingsRepository;
+use ThemeZee\Rosalie\Core\ThemeConfig;
 
 /**
  * Activates and deactivates the theme license against the ThemeZee store
@@ -59,13 +59,13 @@ class LicenseClient {
 		$key = trim( $key );
 
 		if ( '' === $key ) {
-			return $this->result( __( 'Please enter a license key.', 'amalfi' ), 'error' );
+			return $this->result( __( 'Please enter a license key.', 'rosalie' ), 'error' );
 		}
 
 		$data = $this->request( 'activate_license', $key );
 
 		if ( null === $data ) {
-			return $this->result( __( 'An error occurred, please try again.', 'amalfi' ), 'error' );
+			return $this->result( __( 'An error occurred, please try again.', 'rosalie' ), 'error' );
 		}
 
 		if ( empty( $data->success ) ) {
@@ -74,7 +74,7 @@ class LicenseClient {
 
 		$this->settings->storeLicense( $key, SettingsRepository::STATUS_VALID );
 
-		return $this->result( __( 'License was successfully activated.', 'amalfi' ), 'success' );
+		return $this->result( __( 'License was successfully activated.', 'rosalie' ), 'success' );
 	}
 
 	/**
@@ -91,7 +91,7 @@ class LicenseClient {
 
 		$this->settings->clearLicense();
 
-		return $this->result( __( 'License was deactivated.', 'amalfi' ), 'success' );
+		return $this->result( __( 'License was deactivated.', 'rosalie' ), 'success' );
 	}
 
 	/**
@@ -156,7 +156,7 @@ class LicenseClient {
 			case 'expired':
 				return sprintf(
 					/* translators: %s: license expiration date. */
-					esc_html__( 'Your license key expired on %s.', 'amalfi' ),
+					esc_html__( 'Your license key expired on %s.', 'rosalie' ),
 					isset( $data->expires )
 						? esc_html( date_i18n( get_option( 'date_format' ), strtotime( $data->expires, time() ) ) )
 						: ''
@@ -164,27 +164,27 @@ class LicenseClient {
 
 			case 'disabled':
 			case 'revoked':
-				return esc_html__( 'Your license key has been disabled.', 'amalfi' );
+				return esc_html__( 'Your license key has been disabled.', 'rosalie' );
 
 			case 'missing':
-				return esc_html__( 'Invalid license key.', 'amalfi' );
+				return esc_html__( 'Invalid license key.', 'rosalie' );
 
 			case 'invalid':
 			case 'site_inactive':
-				return esc_html__( 'Your license is not active for this URL.', 'amalfi' );
+				return esc_html__( 'Your license is not active for this URL.', 'rosalie' );
 
 			case 'item_name_mismatch':
 				return sprintf(
 					/* translators: %s: theme name. */
-					esc_html__( 'This appears to be an invalid license key for %s.', 'amalfi' ),
+					esc_html__( 'This appears to be an invalid license key for %s.', 'rosalie' ),
 					esc_html( $this->config->name() )
 				);
 
 			case 'no_activations_left':
-				return esc_html__( 'Your license key has reached its activation limit.', 'amalfi' );
+				return esc_html__( 'Your license key has reached its activation limit.', 'rosalie' );
 
 			default:
-				return esc_html__( 'An error occurred, please try again.', 'amalfi' );
+				return esc_html__( 'An error occurred, please try again.', 'rosalie' );
 		}
 	}
 

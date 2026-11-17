@@ -54,7 +54,7 @@ afterEach( () => {
 describe( 'DemoContentPanel', () => {
 	it( 'renders a toggle per part with its label and count', () => {
 		render(
-			<DemoContentPanel parts={ parts } restNamespace="amalfi/v1" />
+			<DemoContentPanel parts={ parts } restNamespace="rosalie/v1" />
 		);
 
 		expect( screen.getByText( 'Blog Posts (12)' ) ).toBeInTheDocument();
@@ -65,7 +65,7 @@ describe( 'DemoContentPanel', () => {
 		const fetch = pendingFetch();
 
 		render(
-			<DemoContentPanel parts={ parts } restNamespace="amalfi/v1" />
+			<DemoContentPanel parts={ parts } restNamespace="rosalie/v1" />
 		);
 
 		await userEvent.click(
@@ -85,7 +85,7 @@ describe( 'DemoContentPanel', () => {
 			screen.getByText( 'Blog Posts imported.' )
 		).toBeInTheDocument();
 		expect( mockApiFetch ).toHaveBeenCalledWith( {
-			path: '/amalfi/v1/demo',
+			path: '/rosalie/v1/demo',
 			method: 'POST',
 			data: { parts: { posts: true, pages: true } },
 		} );
@@ -95,7 +95,7 @@ describe( 'DemoContentPanel', () => {
 		const fetch = pendingFetch();
 
 		render(
-			<DemoContentPanel parts={ parts } restNamespace="amalfi/v1" />
+			<DemoContentPanel parts={ parts } restNamespace="rosalie/v1" />
 		);
 
 		await userEvent.click( screen.getByLabelText( 'Static Pages (3)' ) );
@@ -113,7 +113,7 @@ describe( 'DemoContentPanel', () => {
 
 	it( 'disables the import button when every part is toggled off', async () => {
 		render(
-			<DemoContentPanel parts={ parts } restNamespace="amalfi/v1" />
+			<DemoContentPanel parts={ parts } restNamespace="rosalie/v1" />
 		);
 
 		await userEvent.click( screen.getByLabelText( 'Blog Posts (12)' ) );
@@ -128,7 +128,7 @@ describe( 'DemoContentPanel', () => {
 		const fetch = pendingFetch();
 
 		render(
-			<DemoContentPanel parts={ parts } restNamespace="amalfi/v1" />
+			<DemoContentPanel parts={ parts } restNamespace="rosalie/v1" />
 		);
 
 		await userEvent.click(

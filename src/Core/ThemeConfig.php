@@ -2,18 +2,18 @@
 /**
  * Central theme configuration.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Core;
+namespace ThemeZee\Rosalie\Core;
 
 /**
  * Immutable value object holding the constants the theme services share.
  *
  * This replaces the loose `define()` constants used in the procedural themes
- * (e.g. AMALFI_THEME_NAME / _ID / _VERSION / _STORE_URL) with a single,
+ * (e.g. ROSALIE_THEME_NAME / _ID / _VERSION / _STORE_URL) with a single,
  * injectable source of truth. Instances are created in {@see Module::services()}
  * from the Packable theme properties, so name, version, author and text domain
  * stay in sync with the theme header without being duplicated here.
@@ -37,7 +37,7 @@ final class ThemeConfig {
 	/**
 	 * Constructor.
 	 *
-	 * @param string $name        Human readable theme name (e.g. "Amalfi").
+	 * @param string $name        Human readable theme name (e.g. "Rosalie").
 	 * @param string $slug        Theme slug / stylesheet directory name.
 	 * @param string $version     Current theme version.
 	 * @param string $author      Theme author.
@@ -136,21 +136,21 @@ final class ThemeConfig {
 	 * The option name the theme settings are stored under.
 	 */
 	public function optionName(): string {
-		return 'amalfi_theme_settings';
+		return 'rosalie_theme_settings';
 	}
 
 	/**
 	 * The REST namespace for the theme's own routes.
 	 */
 	public function restNamespace(): string {
-		return 'amalfi/v1';
+		return 'rosalie/v1';
 	}
 
 	/**
 	 * The slug of the admin page under Appearance.
 	 */
 	public function pageSlug(): string {
-		return 'amalfi-theme';
+		return 'rosalie-theme';
 	}
 
 	/**

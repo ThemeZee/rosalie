@@ -2,15 +2,15 @@
 /**
  * Theme updater.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Updates;
+namespace ThemeZee\Rosalie\Updates;
 
-use ThemeZee\Amalfi\Core\SettingsRepository;
-use ThemeZee\Amalfi\Core\ThemeConfig;
+use ThemeZee\Rosalie\Core\SettingsRepository;
+use ThemeZee\Rosalie\Core\ThemeConfig;
 use stdClass;
 
 /**
@@ -127,13 +127,13 @@ class ThemeUpdater {
 			'update.php?action=upgrade-theme&theme=' . rawurlencode( $slug ),
 			'upgrade-theme_' . $slug
 		);
-		$confirm   = esc_js( __( 'Updating this theme will override all theme files. Click "Cancel" to stop, "OK" to update.', 'amalfi' ) );
+		$confirm   = esc_js( __( 'Updating this theme will override all theme files. Click "Cancel" to stop, "OK" to update.', 'rosalie' ) );
 		$changelog = isset( $response->sections['changelog'] ) ? (string) $response->sections['changelog'] : '';
 
 		echo '<div id="update-nag" class="update-nag notice notice-warning inline"><p>';
 		printf(
 			/* translators: %1$s: theme name. %2$s: new version. %3$s: changelog link. %4$s: update link. */
-			wp_kses_post( __( 'Version %2$s of %1$s is available. <a href="%3$s" class="thickbox">View changelog</a> or <a href="%4$s" onclick="%5$s">update now</a>.', 'amalfi' ) ),
+			wp_kses_post( __( 'Version %2$s of %1$s is available. <a href="%3$s" class="thickbox">View changelog</a> or <a href="%4$s" onclick="%5$s">update now</a>.', 'rosalie' ) ),
 			esc_html( $theme->get( 'Name' ) ),
 			esc_html( $response->new_version ),
 			esc_url( '#TB_inline?width=640&inlineId=' . $slug . '_changelog' ),

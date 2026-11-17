@@ -2,16 +2,16 @@
 /**
  * Theme Setup page assets.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Admin;
+namespace ThemeZee\Rosalie\Admin;
 
-use ThemeZee\Amalfi\Core\ThemeConfig;
-use ThemeZee\Amalfi\DemoContent\Importer;
-use ThemeZee\Amalfi\Licensing\LicenseClient;
+use ThemeZee\Rosalie\Core\ThemeConfig;
+use ThemeZee\Rosalie\DemoContent\Importer;
+use ThemeZee\Rosalie\Licensing\LicenseClient;
 
 /**
  * Enqueues the Theme Setup React app and injects its bootstrap data.
@@ -24,7 +24,7 @@ class Assets {
 	/**
 	 * The script/style handle.
 	 */
-	private const HANDLE = 'amalfi-theme-setup';
+	private const HANDLE = 'rosalie-theme-setup';
 
 	/**
 	 * Constructor.
@@ -67,11 +67,11 @@ class Assets {
 			true
 		);
 
-		wp_set_script_translations( self::HANDLE, 'amalfi' );
+		wp_set_script_translations( self::HANDLE, 'rosalie' );
 
 		wp_add_inline_script(
 			self::HANDLE,
-			'window.amalfiThemeSetup = ' . wp_json_encode( $this->bootstrap() ) . ';',
+			'window.rosalieThemeSetup = ' . wp_json_encode( $this->bootstrap() ) . ';',
 			'before'
 		);
 

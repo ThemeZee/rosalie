@@ -2,16 +2,16 @@
 /**
  * Tests for removing the default WordPress patterns and categories.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Tests\Setup;
+namespace ThemeZee\Rosalie\Tests\Setup;
 
 use Brain\Monkey\Functions;
-use ThemeZee\Amalfi\Setup\DefaultBlockPatterns;
-use ThemeZee\Amalfi\Tests\TestCase;
+use ThemeZee\Rosalie\Setup\DefaultBlockPatterns;
+use ThemeZee\Rosalie\Tests\TestCase;
 use WP_Block_Pattern_Categories_Registry;
 use WP_Block_Patterns_Registry;
 
@@ -47,10 +47,10 @@ final class DefaultBlockPatternsTest extends TestCase {
 				'source'     => 'core',
 				'categories' => array( 'core-banner' ),
 			),
-			'amalfi/hero'  => array(
-				'name'       => 'amalfi/hero',
+			'rosalie/hero'  => array(
+				'name'       => 'rosalie/hero',
 				'source'     => 'theme',
-				'categories' => array( 'amalfi_hero' ),
+				'categories' => array( 'rosalie_hero' ),
 			),
 		);
 		WP_Block_Patterns_Registry::$instance = $patterns;
@@ -66,7 +66,7 @@ final class DefaultBlockPatternsTest extends TestCase {
 		};
 		$categories->registered = array(
 			'core-banner' => array( 'name' => 'core-banner' ),
-			'amalfi_hero' => array( 'name' => 'amalfi_hero' ),
+			'rosalie_hero' => array( 'name' => 'rosalie_hero' ),
 			'orphan'      => array( 'name' => 'orphan' ),
 		);
 		WP_Block_Pattern_Categories_Registry::$instance = $categories;
@@ -95,6 +95,6 @@ final class DefaultBlockPatternsTest extends TestCase {
 		// theme pattern still uses is kept.
 		$this->assertContains( 'core-banner', $unregisteredCategories );
 		$this->assertContains( 'orphan', $unregisteredCategories );
-		$this->assertNotContains( 'amalfi_hero', $unregisteredCategories );
+		$this->assertNotContains( 'rosalie_hero', $unregisteredCategories );
 	}
 }

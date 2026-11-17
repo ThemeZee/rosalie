@@ -1,8 +1,8 @@
-# AGENTS.md — Amalfi Theme
+# AGENTS.md — Rosalie Theme
 
-Instructions for AI agents working on the **Amalfi** WordPress block theme. Read this before making any change. These rules describe the theme's architecture and the conventions you must follow; they take precedence over your default habits.
+Instructions for AI agents working on the **Rosalie** WordPress block theme. Read this before making any change. These rules describe the theme's architecture and the conventions you must follow; they take precedence over your default habits.
 
-> **Amalfi is a general-purpose magazine/blog block theme.** The Amalfi Coast travel content that may exist on the demo site is only sample/demo content. Everything in the theme itself — pattern names, category labels, template content, placeholder text — must stay **generic and reusable** for any publication. Never bake travel-specific (or any other domain-specific) wording into the theme.
+> **Rosalie is a general-purpose magazine/blog block theme.** The Amalfi Coast travel content that may exist on the demo site is only sample/demo content. Everything in the theme itself — pattern names, category labels, template content, placeholder text — must stay **generic and reusable** for any publication. Never bake travel-specific (or any other domain-specific) wording into the theme.
 
 ---
 
@@ -25,12 +25,12 @@ These are hard rules. Do not violate them even when it seems easier.
 PHP is organized with the [`themezee/packable`](https://packagist.org/packages/themezee/packable) library into **modules** and **services**. Follow the existing structure.
 
 - **No logic in `functions.php`.** It only bootstraps the `Package`, handles exceptions, and registers modules in the `$modules` array inside `initialize()`. Do not add feature code there.
-- **All PHP lives in `/src`**, autoloaded via PSR-4: `ThemeZee\Amalfi\` → `src/`. New classes are picked up automatically — **no `composer dump-autoload` needed**.
+- **All PHP lives in `/src`**, autoloaded via PSR-4: `ThemeZee\Rosalie\` → `src/`. New classes are picked up automatically — **no `composer dump-autoload` needed**.
 - **A module** is `src/<Name>/Module.php`. It implements `ServiceModule` + `ExecutableModule`, uses `ModuleClassNameIdTrait`, declares its services in `services()` (factories keyed by class name), and hooks them into WordPress in `run( ContainerInterface $container )`.
 - **A service** is an `__invoke`-able class (or a class with action/filter callback methods), e.g. `src/Assets/Frontend.php`, `src/Setup/BlockPatternCategory.php`. Keep each service focused on one responsibility.
 - **Registering a new module:** add it to the `$modules` array in `functions.php` `initialize()` (e.g. `new Assets\Module()`, `new Setup\Module()`).
 
-Conventions: `declare(strict_types=1);`, namespace `ThemeZee\Amalfi\…`, `@package ThemeZee\Amalfi` docblocks, WordPress-style array syntax and spacing (matches `phpcs.xml.dist`).
+Conventions: `declare(strict_types=1);`, namespace `ThemeZee\Rosalie\…`, `@package ThemeZee\Rosalie` docblocks, WordPress-style array syntax and spacing (matches `phpcs.xml.dist`).
 
 Current modules: `src/Assets/` (enqueues compiled CSS/JS, editor styles) and `src/Setup/` (block pattern categories, block styles, removing default Core patterns).
 
@@ -95,16 +95,16 @@ CSS/JS is **compiled, not hand-edited** in `assets/`.
   <?php
   /**
    * Title: <Generic Title>
-   * Slug: amalfi/<slug>
+   * Slug: rosalie/<slug>
    * Categories: <category_name>
    *
-   * @package Amalfi
+   * @package Rosalie
    */
   ?>
   ```
-- **Slug, filename, and title must stay consistent — the slug *is* the sanitized title, and the filename matches the slug.** A pattern titled `Highlights (Grid)` has slug `amalfi/highlights-grid` and lives in `highlights-grid.php`; `Newsletter (Card)` → `amalfi/newsletter-card` → `newsletter-card.php`. Sanitizing lowercases, drops parentheses/`&`, and turns runs of non-alphanumerics into single hyphens. When you change any one of title/slug/filename, update the other two in the same change (and any `wp:pattern`/`patternName` references in site content). Use `mv`, not `git mv` (see §9).
+- **Slug, filename, and title must stay consistent — the slug *is* the sanitized title, and the filename matches the slug.** A pattern titled `Highlights (Grid)` has slug `rosalie/highlights-grid` and lives in `highlights-grid.php`; `Newsletter (Card)` → `rosalie/newsletter-card` → `newsletter-card.php`. Sanitizing lowercases, drops parentheses/`&`, and turns runs of non-alphanumerics into single hyphens. When you change any one of title/slug/filename, update the other two in the same change (and any `wp:pattern`/`patternName` references in site content). Use `mv`, not `git mv` (see §9).
 - **Pattern body is block markup** composed from core blocks, formatted the same way the block editor serializes it (block comments + matching HTML, preset variables in both the attributes and the inline styles). Indentation nesting for readability is fine.
-- **Categories** are registered in `src/Setup/BlockPatternCategory.php`. **A category's slug must match its label** — the slug is `amalfi_` + the lowercased label after `Amalfi:` with spaces as underscores (label `Amalfi: Page Sections` → slug `amalfi_page_sections`, `Amalfi: Query Loops` → `amalfi_query_loops`). Reference the registered slug in each pattern's `Categories:` header, and when you rename a category, update every pattern header that uses it.
+- **Categories** are registered in `src/Setup/BlockPatternCategory.php`. **A category's slug must match its label** — the slug is `rosalie_` + the lowercased label after `Rosalie:` with spaces as underscores (label `Rosalie: Page Sections` → slug `rosalie_page_sections`, `Rosalie: Query Loops` → `rosalie_query_loops`). Reference the registered slug in each pattern's `Categories:` header, and when you rename a category, update every pattern header that uses it.
 - **Naming must be generic/structural**, describing the pattern's role, not any demo topic — e.g. "Testimonials", "Contributors", "Highlights", "Browse by Category", "Call to Action". No domain-specific names in the theme.
 - After renaming/re-slugging a pattern or editing categories, **flush the pattern cache** so changes show up. On this **multisite** install the theme's pattern file list is a *network* (site) transient, so the `--network` flush is the one that matters; run both to be safe:
   ```bash

@@ -2,17 +2,17 @@
 /**
  * Tests for block pattern category registration.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Tests\Setup;
+namespace ThemeZee\Rosalie\Tests\Setup;
 
 use Brain\Monkey\Functions;
 use Mockery;
-use ThemeZee\Amalfi\Setup\BlockPatternCategory;
-use ThemeZee\Amalfi\Tests\TestCase;
+use ThemeZee\Rosalie\Setup\BlockPatternCategory;
+use ThemeZee\Rosalie\Tests\TestCase;
 use WP_Block_Pattern_Categories_Registry;
 
 final class BlockPatternCategoryTest extends TestCase {
@@ -36,10 +36,10 @@ final class BlockPatternCategoryTest extends TestCase {
 
 		( new BlockPatternCategory() )();
 
-		$this->assertArrayHasKey( 'amalfi_hero', $registered );
-		$this->assertArrayHasKey( 'amalfi_query_loops', $registered );
+		$this->assertArrayHasKey( 'rosalie_hero', $registered );
+		$this->assertArrayHasKey( 'rosalie_query_loops', $registered );
 		$this->assertCount( 9, $registered );
-		$this->assertSame( 'Amalfi: Hero', $registered['amalfi_hero'] );
+		$this->assertSame( 'Rosalie: Hero', $registered['rosalie_hero'] );
 	}
 
 	public function test_skips_categories_that_are_already_registered(): void {

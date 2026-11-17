@@ -1,4 +1,4 @@
-// Quote — themed to match Amalfi. By default the quote is framed like the
+// Quote — themed to match Rosalie. By default the quote is framed like the
 // testimonial cards: a full 1px rule in primary-200 with 8px rounded corners
 // and even padding all round. The body text keeps the body-lg italic used by
 // those cards, and the citation is turned into the same small uppercase eyebrow

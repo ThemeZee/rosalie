@@ -2,24 +2,24 @@
 /**
  * Tests for the license reminder notice.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Tests\Licensing;
+namespace ThemeZee\Rosalie\Tests\Licensing;
 
 use Brain\Monkey\Functions;
 use Mockery;
-use ThemeZee\Amalfi\Core\SettingsRepository;
-use ThemeZee\Amalfi\Licensing\Reminder;
-use ThemeZee\Amalfi\Tests\TestCase;
+use ThemeZee\Rosalie\Core\SettingsRepository;
+use ThemeZee\Rosalie\Licensing\Reminder;
+use ThemeZee\Rosalie\Tests\TestCase;
 
 final class ReminderTest extends TestCase {
 
 	protected function setUp(): void {
 		parent::setUp();
-		Functions\when( 'admin_url' )->justReturn( 'https://site.test/wp-admin/themes.php?page=amalfi-theme' );
+		Functions\when( 'admin_url' )->justReturn( 'https://site.test/wp-admin/themes.php?page=rosalie-theme' );
 		unset( $_GET['page'] );
 	}
 
@@ -64,7 +64,7 @@ final class ReminderTest extends TestCase {
 
 	public function test_prints_nothing_on_the_theme_settings_page_itself(): void {
 		Functions\when( 'current_user_can' )->justReturn( true );
-		$_GET['page'] = 'amalfi-theme';
+		$_GET['page'] = 'rosalie-theme';
 
 		$this->assertSame( '', $this->render( $this->reminder( false ), 'themes.php' ) );
 	}
@@ -76,6 +76,6 @@ final class ReminderTest extends TestCase {
 
 		$this->assertStringContainsString( 'notice-info', $output );
 		$this->assertStringContainsString( 'license key', $output );
-		$this->assertStringContainsString( 'Amalfi', $output );
+		$this->assertStringContainsString( 'Rosalie', $output );
 	}
 }

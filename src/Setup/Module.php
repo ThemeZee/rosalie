@@ -2,12 +2,12 @@
 /**
  * Setup module.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Setup;
+namespace ThemeZee\Rosalie\Setup;
 
 use ThemeZee\Packable\Module\ExecutableModule;
 use ThemeZee\Packable\Module\ModuleClassNameIdTrait;

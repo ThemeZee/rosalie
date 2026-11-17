@@ -2,14 +2,14 @@
 /**
  * Demo content markup provider.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\DemoContent;
+namespace ThemeZee\Rosalie\DemoContent;
 
-use ThemeZee\Amalfi\Core\ThemeConfig;
+use ThemeZee\Rosalie\Core\ThemeConfig;
 
 /**
  * Provides the block markup for the demo pages and posts.
@@ -45,11 +45,11 @@ class Content {
 	 */
 	public function categoryNames(): array {
 		return array(
-			__( 'Destinations', 'amalfi' ),
-			__( 'Food & Drink', 'amalfi' ),
-			__( 'Things to Do', 'amalfi' ),
-			__( 'Travel Tips', 'amalfi' ),
-			__( 'Where to Stay', 'amalfi' ),
+			__( 'Destinations', 'rosalie' ),
+			__( 'Food & Drink', 'rosalie' ),
+			__( 'Things to Do', 'rosalie' ),
+			__( 'Travel Tips', 'rosalie' ),
+			__( 'Where to Stay', 'rosalie' ),
 		);
 	}
 
@@ -96,97 +96,97 @@ class Content {
 	public function postDefinitions(): array {
 		return array(
 			array(
-				'title'    => __( "A First-Timer's Guide to the Amalfi Coast", 'amalfi' ),
-				'category' => __( 'Travel Tips', 'amalfi' ),
-				'excerpt'  => __( "Everything we wish we'd known before our first trip — when to go, where to base yourself, and how to arrive.", 'amalfi' ),
+				'title'    => __( "A First-Timer's Guide to the Amalfi Coast", 'rosalie' ),
+				'category' => __( 'Travel Tips', 'rosalie' ),
+				'excerpt'  => __( "Everything we wish we'd known before our first trip — when to go, where to base yourself, and how to arrive.", 'rosalie' ),
 				'file'     => 'amalfi-coast-first-timers-guide',
 				'image'    => 'amalfi-coast-panorama.jpg',
 				'tags'     => array( 'amalfi-town', 'budget', 'ferry' ),
 			),
 			array(
-				'title'    => __( 'Positano: The Vertical Village That Steals Every Heart', 'amalfi' ),
-				'category' => __( 'Destinations', 'amalfi' ),
-				'excerpt'  => __( "Approach by sea and Positano rises like an amphitheatre of colour. A love letter to the coast's most famous village.", 'amalfi' ),
+				'title'    => __( 'Positano: The Vertical Village That Steals Every Heart', 'rosalie' ),
+				'category' => __( 'Destinations', 'rosalie' ),
+				'excerpt'  => __( "Approach by sea and Positano rises like an amphitheatre of colour. A love letter to the coast's most famous village.", 'rosalie' ),
 				'file'     => 'positano-vertical-village',
 				'image'    => 'positano-coast.jpg',
 				'tags'     => array( 'beaches', 'positano', 'romantic' ),
 			),
 			array(
-				'title'    => __( 'Walking the Path of the Gods', 'amalfi' ),
-				'category' => __( 'Things to Do', 'amalfi' ),
-				'excerpt'  => __( 'The Sentiero degli Dei is the coast\'s greatest walk — three hours of ridgeline views from Bomerano to Nocelle.', 'amalfi' ),
+				'title'    => __( 'Walking the Path of the Gods', 'rosalie' ),
+				'category' => __( 'Things to Do', 'rosalie' ),
+				'excerpt'  => __( 'The Sentiero degli Dei is the coast\'s greatest walk — three hours of ridgeline views from Bomerano to Nocelle.', 'rosalie' ),
 				'file'     => 'walking-path-of-the-gods',
 				'image'    => 'amalfi-cliff-view.jpg',
 				'tags'     => array( 'hiking', 'positano' ),
 			),
 			array(
-				'title'    => __( 'A Day Trip to Capri from the Amalfi Coast', 'amalfi' ),
-				'category' => __( 'Destinations', 'amalfi' ),
-				'excerpt'  => __( 'Faraglioni rocks, a chic piazzetta, and a glowing blue grotto. How to make the most of a day on Capri.', 'amalfi' ),
+				'title'    => __( 'A Day Trip to Capri from the Amalfi Coast', 'rosalie' ),
+				'category' => __( 'Destinations', 'rosalie' ),
+				'excerpt'  => __( 'Faraglioni rocks, a chic piazzetta, and a glowing blue grotto. How to make the most of a day on Capri.', 'rosalie' ),
 				'file'     => 'day-trip-to-capri',
 				'image'    => 'capri-faraglioni.jpg',
 				'tags'     => array( 'boat-trips', 'capri', 'ferry' ),
 			),
 			array(
-				'title'    => __( 'Where to Stay: Cute Hotels & Hidden B&Bs', 'amalfi' ),
-				'category' => __( 'Where to Stay', 'amalfi' ),
-				'excerpt'  => __( 'From cliff-edge grand hotels to lemon-grove B&Bs — how to choose where to sleep on the Amalfi Coast.', 'amalfi' ),
+				'title'    => __( 'Where to Stay: Cute Hotels & Hidden B&Bs', 'rosalie' ),
+				'category' => __( 'Where to Stay', 'rosalie' ),
+				'excerpt'  => __( 'From cliff-edge grand hotels to lemon-grove B&Bs — how to choose where to sleep on the Amalfi Coast.', 'rosalie' ),
 				'file'     => 'where-to-stay-amalfi-coast',
 				'image'    => 'amalfi-ravello-port.jpg',
 				'tags'     => array( 'budget', 'luxury', 'romantic' ),
 			),
 			array(
-				'title'    => __( 'Pompeii & Vesuvius: A Journey into Ancient History', 'amalfi' ),
-				'category' => __( 'Destinations', 'amalfi' ),
-				'excerpt'  => __( 'An easy train ride from Naples, the city frozen by Vesuvius in AD 79 makes the ancient world startlingly real.', 'amalfi' ),
+				'title'    => __( 'Pompeii & Vesuvius: A Journey into Ancient History', 'rosalie' ),
+				'category' => __( 'Destinations', 'rosalie' ),
+				'excerpt'  => __( 'An easy train ride from Naples, the city frozen by Vesuvius in AD 79 makes the ancient world startlingly real.', 'rosalie' ),
 				'file'     => 'pompeii-vesuvius-day-trip',
 				'image'    => 'pompeii-vesuvius.jpg',
 				'tags'     => array( 'naples', 'pompeii' ),
 			),
 			array(
-				'title'    => __( 'The Best Seafood Spots Along the Coast', 'amalfi' ),
-				'category' => __( 'Food & Drink', 'amalfi' ),
-				'excerpt'  => __( "From harbour fritto misto to Cetara's anchovies — where and what to eat along the coast.", 'amalfi' ),
+				'title'    => __( 'The Best Seafood Spots Along the Coast', 'rosalie' ),
+				'category' => __( 'Food & Drink', 'rosalie' ),
+				'excerpt'  => __( "From harbour fritto misto to Cetara's anchovies — where and what to eat along the coast.", 'rosalie' ),
 				'file'     => 'best-seafood-amalfi-coast',
 				'image'    => 'coastal-seafood.jpg',
 				'tags'     => array( 'amalfi-town', 'seafood' ),
 			),
 			array(
-				'title'    => __( 'Limoncello: The Taste of the Amalfi Lemons', 'amalfi' ),
-				'category' => __( 'Food & Drink', 'amalfi' ),
-				'excerpt'  => __( "Bright, cold and shockingly lemony: the story of the Amalfi's giant lemons and the drink that ends every meal.", 'amalfi' ),
+				'title'    => __( 'Limoncello: The Taste of the Amalfi Lemons', 'rosalie' ),
+				'category' => __( 'Food & Drink', 'rosalie' ),
+				'excerpt'  => __( "Bright, cold and shockingly lemony: the story of the Amalfi's giant lemons and the drink that ends every meal.", 'rosalie' ),
 				'file'     => 'limoncello-amalfi-lemons',
 				'image'    => 'amalfi-lemons.jpg',
 				'tags'     => array( 'limoncello', 'sorrento' ),
 			),
 			array(
-				'title'    => __( 'Ravello: Gardens, Music & Mountaintop Views', 'amalfi' ),
-				'category' => __( 'Destinations', 'amalfi' ),
-				'excerpt'  => __( 'High above the coast, Ravello is a town of gardens, music, and views that stop conversation.', 'amalfi' ),
+				'title'    => __( 'Ravello: Gardens, Music & Mountaintop Views', 'rosalie' ),
+				'category' => __( 'Destinations', 'rosalie' ),
+				'excerpt'  => __( 'High above the coast, Ravello is a town of gardens, music, and views that stop conversation.', 'rosalie' ),
 				'file'     => 'ravello-gardens-and-views',
 				'image'    => 'ravello-garden.jpg',
 				'tags'     => array( 'ravello', 'romantic' ),
 			),
 			array(
-				'title'    => __( 'Getting Around: Ferries, Buses & the Coastal Road', 'amalfi' ),
-				'category' => __( 'Travel Tips', 'amalfi' ),
-				'excerpt'  => __( 'Ferries, blue SITA buses, or a private driver? How to move between the villages without the stress.', 'amalfi' ),
+				'title'    => __( 'Getting Around: Ferries, Buses & the Coastal Road', 'rosalie' ),
+				'category' => __( 'Travel Tips', 'rosalie' ),
+				'excerpt'  => __( 'Ferries, blue SITA buses, or a private driver? How to move between the villages without the stress.', 'rosalie' ),
 				'file'     => 'getting-around-amalfi-coast',
 				'image'    => 'amalfi-boat.jpg',
 				'tags'     => array( 'boat-trips', 'budget', 'ferry' ),
 			),
 			array(
-				'title'    => __( 'Beach-Hopping on the Amalfi Coast', 'amalfi' ),
-				'category' => __( 'Things to Do', 'amalfi' ),
-				'excerpt'  => __( 'Small, pebbly coves between the cliffs — the best beaches to find, and the secret ones you reach by boat.', 'amalfi' ),
+				'title'    => __( 'Beach-Hopping on the Amalfi Coast', 'rosalie' ),
+				'category' => __( 'Things to Do', 'rosalie' ),
+				'excerpt'  => __( 'Small, pebbly coves between the cliffs — the best beaches to find, and the secret ones you reach by boat.', 'rosalie' ),
 				'file'     => 'beach-hopping-amalfi-coast',
 				'image'    => 'mediterranean-beach.jpg',
 				'tags'     => array( 'beaches', 'boat-trips', 'sorrento' ),
 			),
 			array(
-				'title'    => __( '48 Hours in Naples: Pizza, Culture & Chaos', 'amalfi' ),
-				'category' => __( 'Destinations', 'amalfi' ),
-				'excerpt'  => __( "Don't rush through Italy's most exuberant city. Two days of history, views, and the world's best pizza.", 'amalfi' ),
+				'title'    => __( '48 Hours in Naples: Pizza, Culture & Chaos', 'rosalie' ),
+				'category' => __( 'Destinations', 'rosalie' ),
+				'excerpt'  => __( "Don't rush through Italy's most exuberant city. Two days of history, views, and the world's best pizza.", 'rosalie' ),
 				'file'     => '48-hours-in-naples',
 				'image'    => 'naples-waterfront-sunset.jpg',
 				'tags'     => array( 'naples', 'pompeii' ),
@@ -265,42 +265,42 @@ class Content {
 	public function pageDefinitions(): array {
 		return array(
 			array(
-				'title'    => __( 'Home', 'amalfi' ),
+				'title'    => __( 'Home', 'rosalie' ),
 				'file'     => 'home',
 				'template' => 'page-no-title',
 				'front'    => true,
 				'posts'    => false,
 			),
 			array(
-				'title'    => __( 'Activities', 'amalfi' ),
+				'title'    => __( 'Activities', 'rosalie' ),
 				'file'     => 'activities',
 				'template' => 'page-no-title',
 				'front'    => false,
 				'posts'    => false,
 			),
 			array(
-				'title'    => __( 'Destinations', 'amalfi' ),
+				'title'    => __( 'Destinations', 'rosalie' ),
 				'file'     => 'destinations',
 				'template' => '',
 				'front'    => false,
 				'posts'    => false,
 			),
 			array(
-				'title'    => __( 'About', 'amalfi' ),
+				'title'    => __( 'About', 'rosalie' ),
 				'file'     => 'about',
 				'template' => '',
 				'front'    => false,
 				'posts'    => false,
 			),
 			array(
-				'title'    => __( 'Blog', 'amalfi' ),
+				'title'    => __( 'Blog', 'rosalie' ),
 				'file'     => '',
 				'template' => '',
 				'front'    => false,
 				'posts'    => true,
 			),
 			array(
-				'title'    => __( 'Contact', 'amalfi' ),
+				'title'    => __( 'Contact', 'rosalie' ),
 				'file'     => 'contact',
 				'template' => '',
 				'front'    => false,

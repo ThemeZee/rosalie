@@ -1,7 +1,7 @@
 {
-	"name": "themezee/amalfi",
+	"name": "themezee/rosalie",
 	"type": "wordpress-theme",
-	"description": "The Amalfi WordPress Theme",
+	"description": "The Rosalie WordPress Theme",
 	"license": "GPL-2.0-or-later",
 	"authors": [
 		{
@@ -13,12 +13,12 @@
 	],
 	"autoload": {
 		"psr-4": {
-			"ThemeZee\\Amalfi\\": "src/"
+			"ThemeZee\\Rosalie\\": "src/"
 		}
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"ThemeZee\\Amalfi\\Tests\\": "tests/php/"
+			"ThemeZee\\Rosalie\\Tests\\": "tests/php/"
 		}
 	},
 	"require": {

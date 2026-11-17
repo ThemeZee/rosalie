@@ -55,7 +55,7 @@ export default function DemoContentPanel( {
 							? error.message
 							: __(
 									'The import could not be completed.',
-									'amalfi'
+									'rosalie'
 							  ),
 				},
 			] );
@@ -65,22 +65,22 @@ export default function DemoContentPanel( {
 	};
 
 	return (
-		<div className="amalfi-theme-setup__section">
+		<div className="rosalie-theme-setup__section">
 			<p>
 				{ __(
 					'Select the content to import, then run the importer.',
-					'amalfi'
+					'rosalie'
 				) }
 			</p>
 
-			<div className="amalfi-theme-setup__toggles">
+			<div className="rosalie-theme-setup__toggles">
 				{ parts.map( ( part ) => (
 					<ToggleControl
 						key={ part.key }
 						__nextHasNoMarginBottom
 						label={ sprintf(
 							/* translators: %1$s: content type label. %2$d: number of items. */
-							__( '%1$s (%2$d)', 'amalfi' ),
+							__( '%1$s (%2$d)', 'rosalie' ),
 							part.label,
 							part.count
 						) }
@@ -90,7 +90,7 @@ export default function DemoContentPanel( {
 				) ) }
 			</div>
 
-			<Flex justify="flex-start" className="amalfi-theme-setup__actions">
+			<Flex justify="flex-start" className="rosalie-theme-setup__actions">
 				<Button
 					variant="primary"
 					onClick={ runImport }
@@ -98,8 +98,8 @@ export default function DemoContentPanel( {
 					__next40pxDefaultSize
 				>
 					{ isBusy
-						? __( 'Importing…', 'amalfi' )
-						: __( 'Import Content', 'amalfi' ) }
+						? __( 'Importing…', 'rosalie' )
+						: __( 'Import Content', 'rosalie' ) }
 				</Button>
 				{ isBusy && <Spinner /> }
 			</Flex>
@@ -118,7 +118,7 @@ export default function DemoContentPanel( {
 								)
 							)
 						}
-						className="amalfi-theme-setup__notice"
+						className="rosalie-theme-setup__notice"
 					>
 						{ result.message }
 					</Notice>

@@ -6,7 +6,7 @@
  * are mocked per-test with Brain Monkey, and the few WordPress classes and
  * constants the code references are given minimal stand-ins here.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);

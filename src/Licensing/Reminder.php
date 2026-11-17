@@ -2,15 +2,15 @@
 /**
  * License reminder notice.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Licensing;
+namespace ThemeZee\Rosalie\Licensing;
 
-use ThemeZee\Amalfi\Core\SettingsRepository;
-use ThemeZee\Amalfi\Core\ThemeConfig;
+use ThemeZee\Rosalie\Core\SettingsRepository;
+use ThemeZee\Rosalie\Core\ThemeConfig;
 
 /**
  * Shows an admin notice reminding the user to activate the license when it is
@@ -54,7 +54,7 @@ class Reminder {
 			wp_kses_post(
 				sprintf(
 					/* translators: %1$s: Theme name. %2$s: URL of the theme settings page. */
-					__( 'Please enter your license key for the %1$s theme in order to receive updates and support. <a href="%2$s">Enter License Key</a>', 'amalfi' ),
+					__( 'Please enter your license key for the %1$s theme in order to receive updates and support. <a href="%2$s">Enter License Key</a>', 'rosalie' ),
 					esc_html( $this->config->name() ),
 					esc_url( $this->config->pageUrl() )
 				)

@@ -2,14 +2,14 @@
 /**
  * Theme Setup page.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Admin;
+namespace ThemeZee\Rosalie\Admin;
 
-use ThemeZee\Amalfi\Core\ThemeConfig;
+use ThemeZee\Rosalie\Core\ThemeConfig;
 
 /**
  * Registers the "Theme Setup" page under the Appearance menu and renders its
@@ -25,7 +25,7 @@ class Page {
 	/**
 	 * The DOM id the React app mounts on (the demo/license controls only).
 	 */
-	private const MOUNT_ID = 'amalfi-demo-license';
+	private const MOUNT_ID = 'rosalie-demo-license';
 
 	/**
 	 * Constructor.
@@ -42,8 +42,8 @@ class Page {
 	 */
 	public function registerPage(): void {
 		add_theme_page(
-			esc_html__( 'Theme Setup', 'amalfi' ),
-			esc_html__( 'Theme Setup', 'amalfi' ),
+			esc_html__( 'Theme Setup', 'rosalie' ),
+			esc_html__( 'Theme Setup', 'rosalie' ),
 			$this->config->capability(),
 			$this->config->pageSlug(),
 			array( $this, 'render' )
@@ -59,25 +59,25 @@ class Page {
 		$version = $this->config->version();
 		?>
 		<div class="wrap">
-			<div class="amalfi-theme-info">
+			<div class="rosalie-theme-info">
 
-				<h1 class="amalfi-theme-info__title">
+				<h1 class="rosalie-theme-info__title">
 					<?php
 					/* translators: %1$s: theme name. %2$s: version. */
-					printf( esc_html__( 'Welcome to %1$s %2$s', 'amalfi' ), esc_html( $name ), esc_html( $version ) );
+					printf( esc_html__( 'Welcome to %1$s %2$s', 'rosalie' ), esc_html( $name ), esc_html( $version ) );
 					?>
 				</h1>
 
 				<?php if ( '' !== $this->config->description() ) : ?>
-					<p class="amalfi-theme-info__description">
+					<p class="rosalie-theme-info__description">
 						<?php echo esc_html( $this->config->description() ); ?>
 					</p>
 				<?php endif; ?>
 
 				<hr />
 
-				<p class="amalfi-theme-info__links">
-					<strong><?php esc_html_e( 'Theme Links:', 'amalfi' ); ?></strong>
+				<p class="rosalie-theme-info__links">
+					<strong><?php esc_html_e( 'Theme Links:', 'rosalie' ); ?></strong>
 					<?php foreach ( $this->links() as $link ) : ?>
 						<a href="<?php echo esc_url( $link['url'] ); ?>" target="_blank" rel="noreferrer noopener">
 							<?php echo esc_html( $link['label'] ); ?>
@@ -87,30 +87,30 @@ class Page {
 
 				<hr />
 
-				<section class="amalfi-theme-info__getting-started">
+				<section class="rosalie-theme-info__getting-started">
 					<h2>
 						<?php
 						/* translators: %s: theme name. */
-						printf( esc_html__( 'Getting started with %s', 'amalfi' ), esc_html( $name ) );
+						printf( esc_html__( 'Getting started with %s', 'rosalie' ), esc_html( $name ) );
 						?>
 					</h2>
 
-					<div id="<?php echo esc_attr( self::MOUNT_ID ); ?>" class="amalfi-theme-setup__app">
-						<?php esc_html_e( 'Loading…', 'amalfi' ); ?>
+					<div id="<?php echo esc_attr( self::MOUNT_ID ); ?>" class="rosalie-theme-setup__app">
+						<?php esc_html_e( 'Loading…', 'rosalie' ); ?>
 					</div>
 				</section>
 
 				<hr />
 
-				<section class="amalfi-theme-info__documentation">
-					<h2><?php esc_html_e( 'Theme Documentation', 'amalfi' ); ?></h2>
-					<p class="amalfi-theme-info__about">
-						<?php esc_html_e( 'Need help to set up and configure this theme? We have you covered. Check out the extensive theme documentation on our website.', 'amalfi' ); ?>
+				<section class="rosalie-theme-info__documentation">
+					<h2><?php esc_html_e( 'Theme Documentation', 'rosalie' ); ?></h2>
+					<p class="rosalie-theme-info__about">
+						<?php esc_html_e( 'Need help to set up and configure this theme? We have you covered. Check out the extensive theme documentation on our website.', 'rosalie' ); ?>
 					</p>
 					<a class="button button-secondary" href="<?php echo esc_url( $this->docsUrl() ); ?>" target="_blank" rel="noreferrer noopener">
 						<?php
 						/* translators: %s: theme name. */
-						printf( esc_html__( "View %s's documentation", 'amalfi' ), esc_html( $name ) );
+						printf( esc_html__( "View %s's documentation", 'rosalie' ), esc_html( $name ) );
 						?>
 					</a>
 				</section>
@@ -132,19 +132,19 @@ class Page {
 
 		return array(
 			array(
-				'label' => __( 'Theme Page', 'amalfi' ),
+				'label' => __( 'Theme Page', 'rosalie' ),
 				'url'   => $home,
 			),
 			array(
-				'label' => __( 'Theme Demo', 'amalfi' ),
+				'label' => __( 'Theme Demo', 'rosalie' ),
 				'url'   => 'https://preview.themezee.com/?demo=' . $slug,
 			),
 			array(
-				'label' => __( 'Theme Documentation', 'amalfi' ),
+				'label' => __( 'Theme Documentation', 'rosalie' ),
 				'url'   => $this->docsUrl(),
 			),
 			array(
-				'label' => __( 'Theme Changelog', 'amalfi' ),
+				'label' => __( 'Theme Changelog', 'rosalie' ),
 				'url'   => $store . '/changelogs/?action=themezee-changelog&type=theme&slug=' . $slug,
 			),
 		);

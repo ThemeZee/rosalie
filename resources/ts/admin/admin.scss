@@ -2,16 +2,16 @@
  * Theme Setup admin page styling.
  *
  * The page chrome is server-rendered; only the Demo Content / License Settings
- * container (#amalfi-demo-license) is hydrated by React. Styles are scoped to
+ * container (#rosalie-demo-license) is hydrated by React. Styles are scoped to
  * the server-rendered wrapper so they apply to both.
  */
-.amalfi-theme-info {
+.rosalie-theme-info {
 	position: relative;
 	max-width: 1050px;
 	margin: 25px 40px 0 20px;
 
 	/* Header */
-	.amalfi-theme-info__title {
+	.rosalie-theme-info__title {
 		margin: 0.2em 0 0;
 		padding: 0;
 		color: #333;
@@ -20,7 +20,7 @@
 		line-height: 1.2;
 	}
 
-	.amalfi-theme-info__description {
+	.rosalie-theme-info__description {
 		min-height: 60px;
 		margin: 1em 0;
 		color: #777;
@@ -36,7 +36,7 @@
 	}
 
 	/* Theme links */
-	.amalfi-theme-info__links {
+	.rosalie-theme-info__links {
 		font-size: 14px;
 
 		strong {
@@ -50,12 +50,12 @@
 	}
 
 	/* Getting started */
-	.amalfi-theme-info__getting-started {
+	.rosalie-theme-info__getting-started {
 		margin: 2em 0;
 	}
 
-	.amalfi-theme-info__getting-started h2,
-	.amalfi-theme-info__documentation h2 {
+	.rosalie-theme-info__getting-started h2,
+	.rosalie-theme-info__documentation h2 {
 		margin: 1em 0 0.6em;
 		font-size: 23px;
 		font-weight: 400;
@@ -63,12 +63,12 @@
 	}
 
 	/* Demo/license container (React mount) */
-	.amalfi-theme-setup__app {
+	.rosalie-theme-setup__app {
 		color: #646970;
 	}
 
 	/* Demo Content / License Settings — two columns side by side */
-	.amalfi-theme-setup__columns {
+	.rosalie-theme-setup__columns {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 40px;
@@ -78,12 +78,12 @@
 
 	@media screen and (max-width: 960px) {
 
-		.amalfi-theme-setup__columns {
+		.rosalie-theme-setup__columns {
 			grid-template-columns: 1fr;
 		}
 	}
 
-	.amalfi-theme-setup__group h3 {
+	.rosalie-theme-setup__group h3 {
 		margin: 0 0 0.6em;
 		font-size: 1.3em;
 		font-weight: 600;
@@ -91,11 +91,11 @@
 	}
 
 	/* Documentation */
-	.amalfi-theme-info__documentation {
+	.rosalie-theme-info__documentation {
 		margin: 2em 0 3em;
 	}
 
-	.amalfi-theme-info__about {
+	.rosalie-theme-info__about {
 		max-width: 820px;
 		margin: 0 0 1.2em;
 		color: #777;
@@ -104,35 +104,35 @@
 	}
 
 	/* Panels / controls */
-	.amalfi-theme-setup__section > p:first-child {
+	.rosalie-theme-setup__section > p:first-child {
 		margin-top: 0;
 	}
 
-	.amalfi-theme-setup__toggles {
+	.rosalie-theme-setup__toggles {
 		display: flex;
 		flex-direction: column;
 		gap: 14px;
 		margin: 4px 0 8px;
 	}
 
-	.amalfi-theme-setup__hint {
+	.rosalie-theme-setup__hint {
 		margin-top: 0;
 		color: #646970;
 	}
 
-	.amalfi-theme-setup__actions {
+	.rosalie-theme-setup__actions {
 		margin-top: 16px;
 	}
 
-	.amalfi-theme-setup__notice {
+	.rosalie-theme-setup__notice {
 		margin: 12px 0 0;
 	}
 
-	.amalfi-license-status {
+	.rosalie-license-status {
 		margin-bottom: 16px;
 	}
 
-	.amalfi-license-badge {
+	.rosalie-license-badge {
 		display: inline-block;
 		padding: 2px 10px;
 		border-radius: 2px;

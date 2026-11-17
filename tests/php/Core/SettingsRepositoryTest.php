@@ -2,20 +2,20 @@
 /**
  * Tests for SettingsRepository.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Tests\Core;
+namespace ThemeZee\Rosalie\Tests\Core;
 
 use Brain\Monkey\Functions;
-use ThemeZee\Amalfi\Core\SettingsRepository;
-use ThemeZee\Amalfi\Tests\TestCase;
+use ThemeZee\Rosalie\Core\SettingsRepository;
+use ThemeZee\Rosalie\Tests\TestCase;
 
 final class SettingsRepositoryTest extends TestCase {
 
-	private const OPTION = 'amalfi_theme_settings';
+	private const OPTION = 'rosalie_theme_settings';
 
 	protected function setUp(): void {
 		parent::setUp();
@@ -34,14 +34,14 @@ final class SettingsRepositoryTest extends TestCase {
 		Functions\expect( 'get_option' )
 			->once()
 			->with( self::OPTION, array() )
-			->andReturn( array( 'amalfi_license_key' => 'abc123' ) );
+			->andReturn( array( 'rosalie_license_key' => 'abc123' ) );
 
 		$all = $this->repository()->all();
 
-		$this->assertSame( 'abc123', $all['amalfi_license_key'] );
+		$this->assertSame( 'abc123', $all['rosalie_license_key'] );
 		$this->assertSame(
 			SettingsRepository::STATUS_INACTIVE,
-			$all['amalfi_license_status']
+			$all['rosalie_license_status']
 		);
 	}
 
@@ -52,8 +52,8 @@ final class SettingsRepositoryTest extends TestCase {
 
 		$this->assertSame(
 			array(
-				'amalfi_license_key'    => '',
-				'amalfi_license_status' => SettingsRepository::STATUS_INACTIVE,
+				'rosalie_license_key'    => '',
+				'rosalie_license_status' => SettingsRepository::STATUS_INACTIVE,
 			),
 			$all
 		);
@@ -62,22 +62,22 @@ final class SettingsRepositoryTest extends TestCase {
 	public function test_save_merges_over_the_stored_values(): void {
 		Functions\expect( 'get_option' )
 			->once()
-			->andReturn( array( 'amalfi_license_key' => 'old' ) );
+			->andReturn( array( 'rosalie_license_key' => 'old' ) );
 
 		Functions\expect( 'update_option' )
 			->once()
 			->with(
 				self::OPTION,
 				array(
-					'amalfi_license_key'    => 'new',
-					'amalfi_license_status' => 'valid',
+					'rosalie_license_key'    => 'new',
+					'rosalie_license_status' => 'valid',
 				)
 			);
 
 		$this->repository()->save(
 			array(
-				'amalfi_license_key'    => 'new',
-				'amalfi_license_status' => 'valid',
+				'rosalie_license_key'    => 'new',
+				'rosalie_license_status' => 'valid',
 			)
 		);
 	}
@@ -85,7 +85,7 @@ final class SettingsRepositoryTest extends TestCase {
 	public function test_license_key_is_trimmed(): void {
 		Functions\expect( 'get_option' )
 			->once()
-			->andReturn( array( 'amalfi_license_key' => '  spaced  ' ) );
+			->andReturn( array( 'rosalie_license_key' => '  spaced  ' ) );
 
 		$this->assertSame( 'spaced', $this->repository()->licenseKey() );
 	}
@@ -93,8 +93,8 @@ final class SettingsRepositoryTest extends TestCase {
 	public function test_has_valid_license_requires_valid_status_and_a_key(): void {
 		Functions\when( 'get_option' )->justReturn(
 			array(
-				'amalfi_license_key'    => 'key',
-				'amalfi_license_status' => SettingsRepository::STATUS_VALID,
+				'rosalie_license_key'    => 'key',
+				'rosalie_license_status' => SettingsRepository::STATUS_VALID,
 			)
 		);
 
@@ -104,8 +104,8 @@ final class SettingsRepositoryTest extends TestCase {
 	public function test_has_valid_license_is_false_without_a_key(): void {
 		Functions\when( 'get_option' )->justReturn(
 			array(
-				'amalfi_license_key'    => '',
-				'amalfi_license_status' => SettingsRepository::STATUS_VALID,
+				'rosalie_license_key'    => '',
+				'rosalie_license_status' => SettingsRepository::STATUS_VALID,
 			)
 		);
 
@@ -120,8 +120,8 @@ final class SettingsRepositoryTest extends TestCase {
 			->with(
 				self::OPTION,
 				array(
-					'amalfi_license_key'    => 'the-key',
-					'amalfi_license_status' => SettingsRepository::STATUS_VALID,
+					'rosalie_license_key'    => 'the-key',
+					'rosalie_license_status' => SettingsRepository::STATUS_VALID,
 				)
 			);
 
@@ -130,7 +130,7 @@ final class SettingsRepositoryTest extends TestCase {
 
 	public function test_clear_license_resets_key_and_status(): void {
 		Functions\when( 'get_option' )->justReturn(
-			array( 'amalfi_license_key' => 'the-key' )
+			array( 'rosalie_license_key' => 'the-key' )
 		);
 
 		Functions\expect( 'update_option' )
@@ -138,8 +138,8 @@ final class SettingsRepositoryTest extends TestCase {
 			->with(
 				self::OPTION,
 				array(
-					'amalfi_license_key'    => '',
-					'amalfi_license_status' => SettingsRepository::STATUS_INACTIVE,
+					'rosalie_license_key'    => '',
+					'rosalie_license_status' => SettingsRepository::STATUS_INACTIVE,
 				)
 			);
 

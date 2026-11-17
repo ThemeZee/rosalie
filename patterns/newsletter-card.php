@@ -1,16 +1,16 @@
 <?php
 /**
  * Title: Newsletter (Card)
- * Slug: amalfi/newsletter-card
- * Categories: amalfi_newsletter
+ * Slug: rosalie/newsletter-card
+ * Categories: rosalie_newsletter
  *
- * @package Amalfi
+ * @package Rosalie
  */
 
 ?>
 
-<!-- wp:group {"align":"wide","className":"amalfi-section","style":{"spacing":{"padding":{"top":"var:preset|spacing|1000","bottom":"var:preset|spacing|1000"}}},"layout":{"type":"constrained","contentSize":"800px","wideSize":"800px"}} -->
-<div class="wp-block-group alignwide amalfi-section" style="padding-top:var(--wp--preset--spacing--1000);padding-bottom:var(--wp--preset--spacing--1000)">
+<!-- wp:group {"align":"wide","className":"rosalie-section","style":{"spacing":{"padding":{"top":"var:preset|spacing|1000","bottom":"var:preset|spacing|1000"}}},"layout":{"type":"constrained","contentSize":"800px","wideSize":"800px"}} -->
+<div class="wp-block-group alignwide rosalie-section" style="padding-top:var(--wp--preset--spacing--1000);padding-bottom:var(--wp--preset--spacing--1000)">
 
 	<!-- wp:group {"style":{"border":{"color":"var:preset|color|primary-200","width":"1px","radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|800","right":"var:preset|spacing|600","bottom":"var:preset|spacing|800","left":"var:preset|spacing|600"},"blockGap":"0"}},"backgroundColor":"primary-100","layout":{"type":"constrained","contentSize":"520px"}} -->
 	<div class="wp-block-group has-border-color has-primary-100-background-color has-background" style="border-color:var(--wp--preset--color--primary-200);border-width:1px;border-radius:12px;padding-top:var(--wp--preset--spacing--800);padding-right:var(--wp--preset--spacing--600);padding-bottom:var(--wp--preset--spacing--800);padding-left:var(--wp--preset--spacing--600)">

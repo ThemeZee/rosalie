@@ -2,19 +2,19 @@
 /**
  * Tests for the ThemeUpdater.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Tests\Updates;
+namespace ThemeZee\Rosalie\Tests\Updates;
 
 use Brain\Monkey\Functions;
 use Mockery;
 use stdClass;
-use ThemeZee\Amalfi\Core\SettingsRepository;
-use ThemeZee\Amalfi\Tests\TestCase;
-use ThemeZee\Amalfi\Updates\ThemeUpdater;
+use ThemeZee\Rosalie\Core\SettingsRepository;
+use ThemeZee\Rosalie\Tests\TestCase;
+use ThemeZee\Rosalie\Updates\ThemeUpdater;
 use WP_Error;
 
 final class ThemeUpdaterTest extends TestCase {
@@ -24,7 +24,7 @@ final class ThemeUpdaterTest extends TestCase {
 		$settings->shouldReceive( 'licenseKey' )->andReturn( 'key' );
 
 		return new ThemeUpdater(
-			$this->themeConfig( array( 'version' => $version, 'slug' => 'amalfi' ) ),
+			$this->themeConfig( array( 'version' => $version, 'slug' => 'rosalie' ) ),
 			$settings
 		);
 	}
@@ -41,9 +41,9 @@ final class ThemeUpdaterTest extends TestCase {
 
 		$transient = ( $this->updater( '1.0.0' ) )->injectUpdate( new stdClass() );
 
-		$this->assertArrayHasKey( 'amalfi', $transient->response );
-		$this->assertSame( '2.0.0', $transient->response['amalfi']['new_version'] );
-		$this->assertSame( 'amalfi', $transient->response['amalfi']['theme'] );
+		$this->assertArrayHasKey( 'rosalie', $transient->response );
+		$this->assertSame( '2.0.0', $transient->response['rosalie']['new_version'] );
+		$this->assertSame( 'rosalie', $transient->response['rosalie']['theme'] );
 	}
 
 	public function test_inject_update_lists_an_up_to_date_theme_as_no_update(): void {
@@ -51,7 +51,7 @@ final class ThemeUpdaterTest extends TestCase {
 
 		$transient = ( $this->updater( '1.0.0' ) )->injectUpdate( new stdClass() );
 
-		$this->assertArrayHasKey( 'amalfi', $transient->no_update );
+		$this->assertArrayHasKey( 'rosalie', $transient->no_update );
 		$this->assertObjectNotHasProperty( 'response', $transient );
 	}
 
@@ -77,7 +77,7 @@ final class ThemeUpdaterTest extends TestCase {
 	public function test_flush_deletes_the_cached_response(): void {
 		Functions\expect( 'delete_transient' )
 			->once()
-			->with( 'amalfi-update-response' );
+			->with( 'rosalie-update-response' );
 
 		( $this->updater() )->flush();
 	}

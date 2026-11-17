@@ -2,7 +2,7 @@
  * Shared types for the Theme Setup admin app.
  *
  * These mirror the data shapes produced on the PHP side: the bootstrap object
- * injected via `window.amalfiThemeSetup` and the REST responses returned by the
+ * injected via `window.rosalieThemeSetup` and the REST responses returned by the
  * demo importer and the license client.
  */
 
@@ -78,6 +78,6 @@ export interface PanelNotice {
 
 declare global {
 	interface Window {
-		amalfiThemeSetup?: ThemeSetupBootstrap;
+		rosalieThemeSetup?: ThemeSetupBootstrap;
 	}
 }

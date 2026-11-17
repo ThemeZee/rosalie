@@ -1,16 +1,16 @@
 <?php
 /**
  * Title: Hero (Image)
- * Slug: amalfi/hero-image
- * Categories: amalfi_hero
+ * Slug: rosalie/hero-image
+ * Categories: rosalie_hero
  *
- * @package Amalfi
+ * @package Rosalie
  */
 
 ?>
 
-<!-- wp:group {"align":"full","className":"amalfi-section","style":{"spacing":{"padding":{"top":"var:preset|spacing|1000","bottom":"var:preset|spacing|1000"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
-<div class="wp-block-group alignfull amalfi-section" style="padding-top:var(--wp--preset--spacing--1000);padding-bottom:var(--wp--preset--spacing--1000)">
+<!-- wp:group {"align":"full","className":"rosalie-section","style":{"spacing":{"padding":{"top":"var:preset|spacing|1000","bottom":"var:preset|spacing|1000"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
+<div class="wp-block-group alignfull rosalie-section" style="padding-top:var(--wp--preset--spacing--1000);padding-bottom:var(--wp--preset--spacing--1000)">
 
 	<!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|600","left":"var:preset|spacing|800"}}}} -->
 	<div class="wp-block-columns are-vertically-aligned-center">
@@ -51,7 +51,7 @@
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%">
 
 			<!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
-			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/positano-coast.jpg' ) ); ?>" alt="<?php esc_attr_e( 'Positano on the Amalfi Coast', 'amalfi' ); ?>"/></figure>
+			<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/positano-coast.jpg' ) ); ?>" alt="<?php esc_attr_e( 'Positano on the Amalfi Coast', 'rosalie' ); ?>"/></figure>
 			<!-- /wp:image -->
 
 		</div>

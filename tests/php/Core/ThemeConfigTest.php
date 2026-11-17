@@ -2,27 +2,27 @@
 /**
  * Tests for ThemeConfig.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Tests\Core;
+namespace ThemeZee\Rosalie\Tests\Core;
 
 use Brain\Monkey\Functions;
-use ThemeZee\Amalfi\Core\ThemeConfig;
-use ThemeZee\Amalfi\Tests\TestCase;
+use ThemeZee\Rosalie\Core\ThemeConfig;
+use ThemeZee\Rosalie\Tests\TestCase;
 
 final class ThemeConfigTest extends TestCase {
 
 	private function config( array $overrides = array() ): ThemeConfig {
 		$defaults = array(
-			'name'       => 'Amalfi',
-			'slug'       => 'amalfi',
+			'name'       => 'Rosalie',
+			'slug'       => 'rosalie',
 			'version'    => '1.0.0',
 			'author'     => 'ThemeZee',
-			'textDomain' => 'amalfi',
-			'basePath'   => '/var/www/themes/amalfi',
+			'textDomain' => 'rosalie',
+			'basePath'   => '/var/www/themes/rosalie',
 		);
 		$args     = array_merge( $defaults, $overrides );
 
@@ -39,12 +39,12 @@ final class ThemeConfigTest extends TestCase {
 	public function test_exposes_the_constructor_values(): void {
 		$config = $this->config();
 
-		$this->assertSame( 'Amalfi', $config->name() );
-		$this->assertSame( 'amalfi', $config->slug() );
+		$this->assertSame( 'Rosalie', $config->name() );
+		$this->assertSame( 'rosalie', $config->slug() );
 		$this->assertSame( '1.0.0', $config->version() );
 		$this->assertSame( 'ThemeZee', $config->author() );
-		$this->assertSame( 'amalfi', $config->textDomain() );
-		$this->assertSame( '/var/www/themes/amalfi', $config->basePath() );
+		$this->assertSame( 'rosalie', $config->textDomain() );
+		$this->assertSame( '/var/www/themes/rosalie', $config->basePath() );
 	}
 
 	public function test_defaults_the_store_and_item_from_constants(): void {
@@ -56,11 +56,11 @@ final class ThemeConfigTest extends TestCase {
 
 	public function test_overrides_store_and_item_when_provided(): void {
 		$config = new ThemeConfig(
-			'Amalfi',
-			'amalfi',
+			'Rosalie',
+			'rosalie',
 			'1.0.0',
 			'ThemeZee',
-			'amalfi',
+			'rosalie',
 			'/base',
 			'A theme',
 			'https://example.com',
@@ -77,20 +77,20 @@ final class ThemeConfigTest extends TestCase {
 	public function test_fixed_identifiers(): void {
 		$config = $this->config();
 
-		$this->assertSame( 'amalfi_theme_settings', $config->optionName() );
-		$this->assertSame( 'amalfi/v1', $config->restNamespace() );
-		$this->assertSame( 'amalfi-theme', $config->pageSlug() );
+		$this->assertSame( 'rosalie_theme_settings', $config->optionName() );
+		$this->assertSame( 'rosalie/v1', $config->restNamespace() );
+		$this->assertSame( 'rosalie-theme', $config->pageSlug() );
 		$this->assertSame( 'manage_options', $config->capability() );
 	}
 
 	public function test_page_url_builds_on_the_admin_themes_screen(): void {
 		Functions\expect( 'admin_url' )
 			->once()
-			->with( 'themes.php?page=amalfi-theme' )
-			->andReturn( 'https://site.test/wp-admin/themes.php?page=amalfi-theme' );
+			->with( 'themes.php?page=rosalie-theme' )
+			->andReturn( 'https://site.test/wp-admin/themes.php?page=rosalie-theme' );
 
 		$this->assertSame(
-			'https://site.test/wp-admin/themes.php?page=amalfi-theme',
+			'https://site.test/wp-admin/themes.php?page=rosalie-theme',
 			$this->config()->pageUrl()
 		);
 	}

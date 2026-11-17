@@ -2,16 +2,16 @@
 /**
  * Tests for the demo Content provider.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Tests\DemoContent;
+namespace ThemeZee\Rosalie\Tests\DemoContent;
 
 use Brain\Monkey\Functions;
-use ThemeZee\Amalfi\DemoContent\Content;
-use ThemeZee\Amalfi\Tests\TestCase;
+use ThemeZee\Rosalie\DemoContent\Content;
+use ThemeZee\Rosalie\Tests\TestCase;
 
 final class ContentTest extends TestCase {
 
@@ -45,7 +45,7 @@ final class ContentTest extends TestCase {
 	 * @return string The temp base path to pass as the theme base path.
 	 */
 	private function withPageFixture( string $file, string $markup ): string {
-		$base = sys_get_temp_dir() . '/amalfi-test-' . uniqid();
+		$base = sys_get_temp_dir() . '/rosalie-test-' . uniqid();
 		$dir  = $base . '/demo-content/pages';
 		mkdir( $dir, 0777, true );
 		file_put_contents( $dir . '/' . $file . '.html', $markup );
@@ -245,7 +245,7 @@ final class ContentTest extends TestCase {
 			$name   = basename( $file );
 
 			$this->assertStringNotContainsString( 'href="/', $markup, "{$name} contains a hardcoded root-relative link." );
-			$this->assertStringNotContainsString( '/amalfi/', $markup, "{$name} leaks the demo sub-site path." );
+			$this->assertStringNotContainsString( '/rosalie/', $markup, "{$name} leaks the demo sub-site path." );
 
 			// Query Loops must not pin a hardcoded term ID: those IDs do not
 			// exist on a fresh install, so the loop would render no posts.

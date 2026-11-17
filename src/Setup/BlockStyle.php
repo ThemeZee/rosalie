@@ -2,12 +2,12 @@
 /**
  * Block style registration.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Setup;
+namespace ThemeZee\Rosalie\Setup;
 
 /**
  * Registers the custom block styles provided by the theme.
@@ -27,7 +27,7 @@ class BlockStyle {
 			'core/navigation',
 			array(
 				'name'  => 'main-navigation',
-				'label' => __( 'Main Navigation', 'amalfi' ),
+				'label' => __( 'Main Navigation', 'rosalie' ),
 			)
 		);
 
@@ -35,7 +35,7 @@ class BlockStyle {
 			'core/paragraph',
 			array(
 				'name'  => 'overline',
-				'label' => __( 'Overline', 'amalfi' ),
+				'label' => __( 'Overline', 'rosalie' ),
 			)
 		);
 
@@ -43,7 +43,7 @@ class BlockStyle {
 			'core/heading',
 			array(
 				'name'  => 'overline',
-				'label' => __( 'Overline', 'amalfi' ),
+				'label' => __( 'Overline', 'rosalie' ),
 			)
 		);
 
@@ -51,7 +51,7 @@ class BlockStyle {
 			'core/social-links',
 			array(
 				'name'  => 'primary',
-				'label' => __( 'Primary', 'amalfi' ),
+				'label' => __( 'Primary', 'rosalie' ),
 			)
 		);
 
@@ -59,7 +59,7 @@ class BlockStyle {
 			'core/social-links',
 			array(
 				'name'  => 'outline',
-				'label' => __( 'Outline', 'amalfi' ),
+				'label' => __( 'Outline', 'rosalie' ),
 			)
 		);
 
@@ -67,7 +67,7 @@ class BlockStyle {
 			'core/post-terms',
 			array(
 				'name'  => 'outline',
-				'label' => __( 'Outline', 'amalfi' ),
+				'label' => __( 'Outline', 'rosalie' ),
 			)
 		);
 	}

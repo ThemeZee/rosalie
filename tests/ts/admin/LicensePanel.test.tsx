@@ -48,7 +48,7 @@ afterEach( () => {
 describe( 'LicensePanel (inactive)', () => {
 	it( 'shows the inactive badge and a disabled activate button until a key is entered', () => {
 		render(
-			<LicensePanel initialState={ {} } restNamespace="amalfi/v1" />
+			<LicensePanel initialState={ {} } restNamespace="rosalie/v1" />
 		);
 
 		expect( screen.getByText( 'Inactive' ) ).toBeInTheDocument();
@@ -61,7 +61,7 @@ describe( 'LicensePanel (inactive)', () => {
 		const fetch = pendingFetch();
 
 		render(
-			<LicensePanel initialState={ {} } restNamespace="amalfi/v1" />
+			<LicensePanel initialState={ {} } restNamespace="rosalie/v1" />
 		);
 
 		await userEvent.type(
@@ -87,7 +87,7 @@ describe( 'LicensePanel (inactive)', () => {
 			screen.getByRole( 'button', { name: 'Deactivate License' } )
 		).toBeInTheDocument();
 		expect( mockApiFetch ).toHaveBeenCalledWith( {
-			path: '/amalfi/v1/license',
+			path: '/rosalie/v1/license',
 			method: 'POST',
 			data: { action: 'activate', key: 'SECRET-ABCDE' },
 		} );
@@ -97,7 +97,7 @@ describe( 'LicensePanel (inactive)', () => {
 		const fetch = pendingFetch();
 
 		render(
-			<LicensePanel initialState={ {} } restNamespace="amalfi/v1" />
+			<LicensePanel initialState={ {} } restNamespace="rosalie/v1" />
 		);
 
 		await userEvent.type( screen.getByLabelText( 'License Key' ), 'nope' );
@@ -122,7 +122,7 @@ describe( 'LicensePanel (inactive)', () => {
 		const fetch = pendingFetch();
 
 		render(
-			<LicensePanel initialState={ {} } restNamespace="amalfi/v1" />
+			<LicensePanel initialState={ {} } restNamespace="rosalie/v1" />
 		);
 
 		await userEvent.type( screen.getByLabelText( 'License Key' ), 'key' );
@@ -146,7 +146,7 @@ describe( 'LicensePanel (active)', () => {
 		render(
 			<LicensePanel
 				initialState={ activeState }
-				restNamespace="amalfi/v1"
+				restNamespace="rosalie/v1"
 			/>
 		);
 
@@ -160,7 +160,7 @@ describe( 'LicensePanel (active)', () => {
 		render(
 			<LicensePanel
 				initialState={ activeState }
-				restNamespace="amalfi/v1"
+				restNamespace="rosalie/v1"
 			/>
 		);
 
@@ -177,7 +177,7 @@ describe( 'LicensePanel (active)', () => {
 
 		expect( screen.getByText( 'Inactive' ) ).toBeInTheDocument();
 		expect( mockApiFetch ).toHaveBeenCalledWith( {
-			path: '/amalfi/v1/license',
+			path: '/rosalie/v1/license',
 			method: 'POST',
 			data: { action: 'deactivate' },
 		} );

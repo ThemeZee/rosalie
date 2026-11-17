@@ -2,12 +2,12 @@
 /**
  * Theme functions and definitions.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi;
+namespace ThemeZee\Rosalie;
 
 use ThemeZee\Packable\Package;
 use ThemeZee\Packable\Properties\ThemeProperties;

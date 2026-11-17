@@ -2,12 +2,12 @@
 /**
  * Removal of the default WordPress block patterns and categories.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Setup;
+namespace ThemeZee\Rosalie\Setup;
 
 use WP_Block_Pattern_Categories_Registry;
 use WP_Block_Patterns_Registry;

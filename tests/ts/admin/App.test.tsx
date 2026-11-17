@@ -8,13 +8,13 @@ import App from '../../../resources/ts/admin/App';
 jest.mock( '@wordpress/api-fetch' );
 
 afterEach( () => {
-	delete window.amalfiThemeSetup;
+	delete window.rosalieThemeSetup;
 } );
 
 describe( 'App', () => {
 	it( 'renders both section headings from the bootstrap data', () => {
-		window.amalfiThemeSetup = {
-			restNamespace: 'amalfi/v1',
+		window.rosalieThemeSetup = {
+			restNamespace: 'rosalie/v1',
 			demoParts: [ { key: 'posts', label: 'Blog Posts', count: 2 } ],
 			license: { active: false, status: 'inactive', keyMasked: '' },
 		};

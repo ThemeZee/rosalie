@@ -2,18 +2,18 @@
 /**
  * Tests for the demo content REST controller.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Tests\DemoContent;
+namespace ThemeZee\Rosalie\Tests\DemoContent;
 
 use Brain\Monkey\Functions;
 use Mockery;
-use ThemeZee\Amalfi\DemoContent\Importer;
-use ThemeZee\Amalfi\DemoContent\RestController;
-use ThemeZee\Amalfi\Tests\TestCase;
+use ThemeZee\Rosalie\DemoContent\Importer;
+use ThemeZee\Rosalie\DemoContent\RestController;
+use ThemeZee\Rosalie\Tests\TestCase;
 use WP_REST_Request;
 
 final class RestControllerTest extends TestCase {

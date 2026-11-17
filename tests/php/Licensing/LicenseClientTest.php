@@ -2,19 +2,19 @@
 /**
  * Tests for LicenseClient.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Tests\Licensing;
+namespace ThemeZee\Rosalie\Tests\Licensing;
 
 use Brain\Monkey\Functions;
 use Mockery;
-use ThemeZee\Amalfi\Core\SettingsRepository;
-use ThemeZee\Amalfi\Core\ThemeConfig;
-use ThemeZee\Amalfi\Licensing\LicenseClient;
-use ThemeZee\Amalfi\Tests\TestCase;
+use ThemeZee\Rosalie\Core\SettingsRepository;
+use ThemeZee\Rosalie\Core\ThemeConfig;
+use ThemeZee\Rosalie\Licensing\LicenseClient;
+use ThemeZee\Rosalie\Tests\TestCase;
 use WP_Error;
 
 final class LicenseClientTest extends TestCase {

@@ -2,18 +2,18 @@
 /**
  * Tests for the license REST controller.
  *
- * @package ThemeZee\Amalfi
+ * @package ThemeZee\Rosalie
  */
 
 declare(strict_types=1);
 
-namespace ThemeZee\Amalfi\Tests\Licensing;
+namespace ThemeZee\Rosalie\Tests\Licensing;
 
 use Brain\Monkey\Functions;
 use Mockery;
-use ThemeZee\Amalfi\Licensing\LicenseClient;
-use ThemeZee\Amalfi\Licensing\RestController;
-use ThemeZee\Amalfi\Tests\TestCase;
+use ThemeZee\Rosalie\Licensing\LicenseClient;
+use ThemeZee\Rosalie\Licensing\RestController;
+use ThemeZee\Rosalie\Tests\TestCase;
 use WP_REST_Request;
 
 final class RestControllerTest extends TestCase {
