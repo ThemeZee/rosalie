@@ -1,15 +1,17 @@
-// Code — a soft primary-200 card with the theme's 8px corner rounding (the same
-// radius as the home-page images/cards). The tint sits a shade darker than the
-// page, so the snippet reads as a distinct panel without needing a border. The
-// monospaced font stack has no theme.json key, so it is set through `css` on
-// the block root (inherited by the inner `<code>`).
+// Code — a sharp-cornered surface panel with a hairline border, sitting a shade
+// off the yellow canvas so the snippet reads as a distinct block. The monospaced
+// font stack has no theme.json key, so it is set through `css` on the block root
+// (inherited by the inner `<code>`).
 module.exports = {
 	color: {
-		background: 'var:preset|color|primary-200',
-		text: 'var:preset|color|primary-950',
+		background: 'var:preset|color|surface',
+		text: 'var:preset|color|contrast',
 	},
 	border: {
-		radius: '8px',
+		color: 'var:custom|color|line',
+		radius: '0',
+		style: 'solid',
+		width: '1px',
 	},
 	spacing: {
 		padding: {

@@ -1,4 +1,4 @@
 module.exports = {
-	background: 'var:preset|color|primary-100',
-	text: 'var:preset|color|primary-950',
+	background: 'var:preset|color|base',
+	text: 'var:preset|color|contrast',
 };

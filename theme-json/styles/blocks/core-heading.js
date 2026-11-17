@@ -1,17 +1,12 @@
 module.exports = {
 	variations: {
-		// Overline — small, uppercase, letter-spaced label, matching the
-		// Paragraph Overline style (see core-paragraph.js) pixel for pixel.
-		//
-		// The Paragraph version is pure typography/colour because a paragraph
-		// already inherits the body font, upright style and body line-height.
-		// A heading does not: `styles.elements.heading` gives every heading the
-		// display (serif) font, italic style, weight 600 and the tight display
-		// line-height. So this variation additionally resets those heading
-		// defaults back to the body values, leaving the two styles identical.
+		// Overline — small, uppercase, letter-spaced eyebrow label, matching the
+		// Paragraph Overline (see core-paragraph.js). A heading otherwise inherits
+		// the heavy display font, weight 800 and tight line-height from
+		// `styles.elements.heading`, so this resets those back to the body values.
 		overline: {
 			color: {
-				text: 'var:preset|color|primary-600',
+				text: 'var:preset|color|muted',
 			},
 			typography: {
 				fontFamily: 'var:custom|font-family|body',

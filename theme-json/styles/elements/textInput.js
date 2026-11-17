@@ -2,25 +2,25 @@
 // <input> types (email, number, password, search, text, tel, url) in one place —
 // in any form, whether or not the Form block renders it. `select` shares the same
 // look (see ./select.js). Expressed entirely through structured theme.json keys,
-// including the keyboard-focus outline: Gutenberg (24.3.0 here, WP 7.1.4) added
-// pseudo-state support for form elements, so `:focus-visible` lives here too — no
-// custom CSS needed for the fields at all.
+// including the keyboard-focus outline.
 //
-// Primary-200 fill, no border, 8px radius, comfortable padding, body typography,
-// and a primary-500 focus ring for keyboard users (the fill replaces the border).
+// Sharp-cornered white field with a 1px ink border (matching the bold, square
+// look of the reference), near-black text, comfortable padding, body typography,
+// and an ink focus ring for keyboard users.
 module.exports = {
 	border: {
-		radius: '8px',
-		style: 'none',
-		width: '0',
+		color: 'var:preset|color|contrast',
+		radius: '0',
+		style: 'solid',
+		width: '1px',
 	},
 	color: {
-		background: 'var:preset|color|primary-200',
-		text: 'var:preset|color|primary-950',
+		background: 'var:preset|color|white',
+		text: 'var:preset|color|contrast',
 	},
 	':focus-visible': {
 		outline: {
-			color: 'var:preset|color|primary-500',
+			color: 'var:preset|color|contrast',
 			offset: '2px',
 			style: 'solid',
 			width: '2px',

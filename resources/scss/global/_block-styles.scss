@@ -17,5 +17,5 @@
 // background a user picks in the editor still overrides this default — no
 // `!important` required.
 .wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
-	background-color: var(--wp--preset--color--primary-200);
+	background-color: var(--wp--preset--color--surface);
 }

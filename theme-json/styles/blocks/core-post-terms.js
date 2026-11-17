@@ -1,18 +1,22 @@
+// Post Terms — small uppercase meta links in the muted neutral that go to the
+// ink colour on hover. The `outline` variation turns each term link into a
+// sharp-cornered outline pill (transparent box with an ink border that fills on
+// hover), matching the Button block's outline motif.
 module.exports = {
 	color: {
-		text: 'var:preset|color|primary-700',
+		text: 'var:preset|color|muted',
 	},
 	elements: {
 		link: {
 			color: {
-				text: 'var:preset|color|primary-700',
+				text: 'var:preset|color|muted',
 			},
 			typography: {
 				textDecoration: 'none',
 			},
 			':hover': {
 				color: {
-					text: 'var:preset|color|primary-950',
+					text: 'var:preset|color|contrast',
 				},
 			},
 		},
@@ -24,28 +28,21 @@ module.exports = {
 		textTransform: 'uppercase',
 	},
 	variations: {
-		// Outline — gives each term link the look of the Button block's Outline
-		// style: a transparent, 1px-bordered box in the dark primary colour that
-		// fills on hover, with a slightly more compact box than a button.
-		// Styling only `elements.link` leaves the prefix and suffix with the
-		// block's default styling; the comma separator is hidden instead (a plain
-		// gap between the bordered boxes reads better than a comma), so the pills
-		// carry their own right/bottom margin for spacing.
 		outline: {
-			// `&` is the block container (`.is-style-outline--N`). The separator
-			// is a non-link `<span>` with no design key, so hide it here.
+			// `&` is the block container. Hide the comma separator — a plain gap
+			// between the bordered pills reads better.
 			css: '& .wp-block-post-terms__separator{display:none}',
 			elements: {
 				link: {
 					border: {
-						color: 'var:preset|color|primary-950',
+						color: 'var:preset|color|contrast',
 						radius: '0',
 						style: 'solid',
 						width: '1px',
 					},
 					color: {
 						background: 'transparent',
-						text: 'var:preset|color|primary-950',
+						text: 'var:preset|color|contrast',
 					},
 					spacing: {
 						margin: {
@@ -60,27 +57,24 @@ module.exports = {
 						},
 					},
 					typography: {
-						// Font size inherits the block default (body-xs).
 						lineHeight: 'var:custom|line-height|display',
 					},
-					// `display`/`transition` have no design key; the links render
-					// inline, so inline-block is needed for the padded box.
 					css: 'display: inline-block; transition: all 0.2s ease-in-out',
 					':hover': {
 						border: {
-							color: 'var:preset|color|primary-950',
+							color: 'var:preset|color|contrast',
 						},
 						color: {
-							background: 'var:preset|color|primary-950',
+							background: 'var:preset|color|contrast',
 							text: 'var:preset|color|white',
 						},
 					},
 					':active': {
 						border: {
-							color: 'var:preset|color|primary-950',
+							color: 'var:preset|color|contrast',
 						},
 						color: {
-							background: 'var:preset|color|primary-950',
+							background: 'var:preset|color|contrast',
 							text: 'var:preset|color|white',
 						},
 					},
@@ -89,7 +83,7 @@ module.exports = {
 							offset: '3px',
 							width: '3px',
 							style: 'solid',
-							color: 'var:preset|color|primary-950',
+							color: 'var:preset|color|contrast',
 						},
 					},
 				},

@@ -1,74 +1,44 @@
-// Quote — themed to match Rosalie. By default the quote is framed like the
-// testimonial cards: a full 1px rule in primary-200 with 8px rounded corners
-// and even padding all round. The body text keeps the body-lg italic used by
-// those cards, and the citation is turned into the same small uppercase eyebrow
-// as the Overline style (primary-600, Manrope). The citation is an inline
-// `<cite>` — neither a block nor a theme.json element — so it is styled through
-// the `css` escape hatch.
+// Quote — framed by a thick ink rule on the left with a left indent (the
+// reference's review-quote voice), the body kept upright at body-lg. The
+// citation becomes the small uppercase eyebrow (muted, Figtree). `<cite>` is an
+// inline node, so it is styled through `css`.
 //
-// The base here applies to every quote (`.wp-block-quote`), so the typography
-// and citation treatment are shared. The core-registered `plain` block style
-// drops the frame for a cleaner look: a single left accent rule in primary-300
-// (the theme's former default) with just a left indent.
+// The base applies to every quote; the core-registered `plain` block style
+// softens the accent rule to a hairline.
 module.exports = {
 	color: {
-		text: 'var:preset|color|primary-800',
+		text: 'var:preset|color|contrast',
 	},
 	border: {
-		color: 'var:preset|color|primary-200',
-		radius: '8px',
-		style: 'solid',
-		width: '1px',
+		left: {
+			color: 'var:preset|color|contrast',
+			style: 'solid',
+			width: '3px',
+		},
 	},
 	spacing: {
 		padding: {
-			top: 'var:preset|spacing|500',
-			right: 'var:preset|spacing|500',
-			bottom: 'var:preset|spacing|500',
-			left: 'var:preset|spacing|500',
+			left: 'var:preset|spacing|400',
 		},
 	},
 	typography: {
 		fontSize: 'var:preset|font-size|body-lg',
-		fontStyle: 'italic',
+		fontStyle: 'normal',
 	},
 	css:
 		'& cite{display:block;margin-top:var(--wp--preset--spacing--200);' +
-		'font-family:var(--wp--preset--font-family--manrope);' +
+		'font-family:var(--wp--preset--font-family--figtree);' +
 		'font-size:var(--wp--preset--font-size--body-xs);font-style:normal;' +
 		'font-weight:700;letter-spacing:0.12rem;text-transform:uppercase;' +
-		'color:var(--wp--preset--color--primary-600)}',
+		'color:var(--wp--preset--color--muted)}',
 	variations: {
-		// Plain — drops the surrounding frame and rounded corners in favour of a
-		// single left accent rule in primary-300 with a left indent (the theme's
-		// former default quote styling), keeping the shared italic body text.
+		// Plain — softens the accent rule to a hairline.
 		plain: {
 			border: {
-				radius: '0',
-				top: {
-					style: 'none',
-					width: '0',
-				},
-				right: {
-					style: 'none',
-					width: '0',
-				},
-				bottom: {
-					style: 'none',
-					width: '0',
-				},
 				left: {
-					color: 'var:preset|color|primary-300',
+					color: 'var:custom|color|line-strong',
 					style: 'solid',
-					width: '4px',
-				},
-			},
-			spacing: {
-				padding: {
-					top: '0',
-					right: '0',
-					bottom: '0',
-					left: 'var:preset|spacing|400',
+					width: '1px',
 				},
 			},
 		},

@@ -1,11 +1,10 @@
 module.exports = {
 	variations: {
-		// Overline — small, uppercase, letter-spaced label used above headings.
-		// Pure typography and colour, so it is expressed entirely with design
-		// keys (no `css` property needed).
+		// Overline — small, uppercase, letter-spaced eyebrow label used above
+		// headings and as section/meta labels. Pure typography and colour.
 		overline: {
 			color: {
-				text: 'var:preset|color|primary-600',
+				text: 'var:preset|color|muted',
 			},
 			typography: {
 				fontSize: 'var:preset|font-size|body-xs',

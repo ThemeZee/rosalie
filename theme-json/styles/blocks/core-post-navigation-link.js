@@ -1,28 +1,23 @@
-// Default styling for the Post Navigation Link block (Previous / Next links on
-// single posts). Styled to read the same as the Tags links in the post footer
-// (core/post-terms, body-xs / 12px) — plain uppercase links, not a
-// button. Kept in lock-step with core-post-terms.js: primary-700 links that go
-// primary-950 on hover, no underline, 700 weight, 0.12rem letter-spacing,
-// uppercase. Pure structured keys — no border/background/box, so no css escape
-// hatch is needed (the link's own :hover is enough; WP emits element :hover
-// after the base rule, so it wins without the ordering tricks a box invert needs).
+// Post Navigation Link (Previous / Next on single posts) — reads the same as
+// the Tags links in the post footer: plain uppercase meta links in the muted
+// neutral that go to the ink colour on hover, no underline. Kept in lock-step
+// with core-post-terms.js.
 module.exports = {
 	color: {
-		// The direction arrow <span> (a sibling of the link, not a link itself)
-		// inherits this.
-		text: 'var:preset|color|primary-700',
+		// The direction arrow <span> (a sibling of the link) inherits this.
+		text: 'var:preset|color|muted',
 	},
 	elements: {
 		link: {
 			color: {
-				text: 'var:preset|color|primary-700',
+				text: 'var:preset|color|muted',
 			},
 			typography: {
 				textDecoration: 'none',
 			},
 			':hover': {
 				color: {
-					text: 'var:preset|color|primary-950',
+					text: 'var:preset|color|contrast',
 				},
 			},
 		},

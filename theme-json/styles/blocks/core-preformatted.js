@@ -1,15 +1,16 @@
-// Preformatted — the same soft primary-200 card as the Code block (8px rounding,
-// no border) sitting a shade darker than the page, but it keeps the body font
-// rather than a monospace stack, since Preformatted is for preserving whitespace
-// in ordinary text. `overflow:auto` (no theme.json key) guards against long
-// lines.
+// Preformatted — the same sharp-cornered surface panel as the Code block, but
+// keeping the body font (it preserves whitespace in ordinary text, not code).
+// `overflow:auto` (no theme.json key) guards against long lines.
 module.exports = {
 	color: {
-		background: 'var:preset|color|primary-200',
-		text: 'var:preset|color|primary-950',
+		background: 'var:preset|color|surface',
+		text: 'var:preset|color|contrast',
 	},
 	border: {
-		radius: '8px',
+		color: 'var:custom|color|line',
+		radius: '0',
+		style: 'solid',
+		width: '1px',
 	},
 	spacing: {
 		padding: {

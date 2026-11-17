@@ -1,57 +1,46 @@
+// Rosalie's curated colour palette — a bold, high-contrast system built on a
+// brass-yellow canvas, near-black ink and a couple of neutrals. Deliberately
+// small so the editor colour picker stays on-brand; `defaultPalette` is off
+// (see ../color.js) so only these show.
+//
+//   base      brass yellow — the page canvas and the highlight on dark sections
+//   contrast  near-black   — body text, buttons, dark sections, rules
+//   white     pure white   — text/fills on the dark sections
+//   surface   soft off-white — light panels, inputs, code blocks
+//   muted     dark neutral — secondary text / eyebrows on the light canvas (AA)
+//   subtle    light neutral — secondary text on the dark sections (AA)
+//
+// Hairline rules (translucent ink / white) are not swatches — see
+// ../custom/color.js.
 module.exports = [
 	{
-		color: '#f3faf5',
-		name: 'Primary 50',
-		slug: 'primary-50',
+		color: '#ffd21f',
+		name: 'Base',
+		slug: 'base',
 	},
 	{
-		color: '#e3f5e9',
-		name: 'Primary 100',
-		slug: 'primary-100',
+		color: '#0d0d0d',
+		name: 'Contrast',
+		slug: 'contrast',
 	},
 	{
-		color: '#c7ebd4',
-		name: 'Primary 200',
-		slug: 'primary-200',
+		color: '#ffffff',
+		name: 'White',
+		slug: 'white',
 	},
 	{
-		color: '#9cd9b3',
-		name: 'Primary 300',
-		slug: 'primary-300',
+		color: '#f5f4ef',
+		name: 'Surface',
+		slug: 'surface',
 	},
 	{
-		color: '#68c089',
-		name: 'Primary 400',
-		slug: 'primary-400',
+		color: '#44443e',
+		name: 'Muted',
+		slug: 'muted',
 	},
 	{
-		color: '#42a066',
-		name: 'Primary 500',
-		slug: 'primary-500',
-	},
-	{
-		color: '#338653',
-		name: 'Primary 600',
-		slug: 'primary-600',
-	},
-	{
-		color: '#2b6a43',
-		name: 'Primary 700',
-		slug: 'primary-700',
-	},
-	{
-		color: '#265539',
-		name: 'Primary 800',
-		slug: 'primary-800',
-	},
-	{
-		color: '#214630',
-		name: 'Primary 900',
-		slug: 'primary-900',
-	},
-	{
-		color: '#0d2618',
-		name: 'Primary 950',
-		slug: 'primary-950',
+		color: '#9a9992',
+		name: 'Subtle',
+		slug: 'subtle',
 	},
 ];

@@ -1,4 +1,5 @@
 module.exports = {
-	contentSize: '720px',
-	wideSize: '1040px',
+	// Comfortable measure for running text; wide for full-bleed section content.
+	contentSize: '760px',
+	wideSize: '1200px',
 };
