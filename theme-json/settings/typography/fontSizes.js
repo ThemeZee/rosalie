@@ -62,27 +62,27 @@ module.exports = [
 	{
 		fluid: {
 			min: '2.25rem',
-			max: '3rem',
+			max: '3.125rem',
 		},
-		size: '3rem',
+		size: '3.125rem',
 		slug: 'display-md',
 		name: 'Display (Medium)',
 	},
 	{
 		fluid: {
 			min: '2.75rem',
-			max: '4.5rem',
+			max: '4.625rem',
 		},
-		size: '4.5rem',
+		size: '4.625rem',
 		slug: 'display-lg',
 		name: 'Display (Large)',
 	},
 	{
 		fluid: {
 			min: '3.5rem',
-			max: '6rem',
+			max: '6.125rem',
 		},
-		size: '6rem',
+		size: '6.125rem',
 		slug: 'display-xl',
 		name: 'Display (Extra Large)',
 	},

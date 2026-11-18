@@ -25,10 +25,13 @@ module.exports = {
 	},
 	css:
 		'& table{width:100%;border-collapse:collapse}' +
-		'& th,& td{border-bottom:1px solid var(--wp--custom--color--line);' +
+		// Core gives every cell a full 1px border at 0-2-0; reset it (no editor
+		// control for per-cell borders) and keep only a hairline row rule.
+		'& th,& td{border:0 !important;' +
+		'border-bottom:1px solid var(--wp--custom--color--line) !important;' +
 		'padding:var(--wp--preset--spacing--200) var(--wp--preset--spacing--300);' +
 		'text-align:left;vertical-align:top}' +
-		'& thead th{border-bottom:1px solid var(--wp--preset--color--contrast);' +
+		'& thead th{border-bottom:1px solid var(--wp--preset--color--contrast) !important;' +
 		'font-family:var(--wp--preset--font-family--figtree);' +
 		'font-size:var(--wp--preset--font-size--body-xs);font-weight:700;' +
 		'letter-spacing:0.08rem;text-transform:uppercase;' +
@@ -38,8 +41,8 @@ module.exports = {
 	variations: {
 		stripes: {
 			css:
-				'& th,& td{border-color:transparent}' +
-				'& thead th{border-bottom:1px solid var(--wp--preset--color--contrast)}',
+				'& th,& td{border:0 !important}' +
+				'& thead th{border-bottom:1px solid var(--wp--preset--color--contrast) !important}',
 		},
 	},
 };

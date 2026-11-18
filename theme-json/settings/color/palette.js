@@ -1,9 +1,9 @@
-// Rosalie's curated colour palette — a bold, high-contrast system built on a
-// brass-yellow canvas, near-black ink and a couple of neutrals. Deliberately
+// Rosalie's curated colour palette — a soft, high-contrast system built on a
+// pale-pink canvas, near-black ink and a couple of neutrals. Deliberately
 // small so the editor colour picker stays on-brand; `defaultPalette` is off
 // (see ../color.js) so only these show.
 //
-//   base      brass yellow — the page canvas and the highlight on dark sections
+//   base      pale pink    — the page canvas and the highlight on dark sections
 //   contrast  near-black   — body text, buttons, dark sections, rules
 //   white     pure white   — text/fills on the dark sections
 //   surface   soft off-white — light panels, inputs, code blocks
@@ -14,12 +14,12 @@
 // ../custom/color.js.
 module.exports = [
 	{
-		color: '#ffd21f',
+		color: '#f8d4f0',
 		name: 'Base',
 		slug: 'base',
 	},
 	{
-		color: '#0d0d0d',
+		color: '#080400',
 		name: 'Contrast',
 		slug: 'contrast',
 	},
@@ -29,17 +29,17 @@ module.exports = [
 		slug: 'white',
 	},
 	{
-		color: '#f5f4ef',
+		color: '#f8f4f0',
 		name: 'Surface',
 		slug: 'surface',
 	},
 	{
-		color: '#44443e',
+		color: '#484430',
 		name: 'Muted',
 		slug: 'muted',
 	},
 	{
-		color: '#9a9992',
+		color: '#989490',
 		name: 'Subtle',
 		slug: 'subtle',
 	},
