@@ -9,11 +9,11 @@
 
 ?>
 
-<!-- wp:group {"align":"full","backgroundColor":"primary-200","className":"rosalie-section","style":{"spacing":{"padding":{"top":"var:preset|spacing|1000","right":"var:preset|spacing|600","bottom":"var:preset|spacing|1000","left":"var:preset|spacing|600"}}},"layout":{"type":"constrained","contentSize":"1040px"}} -->
+<!-- wp:group {"align":"full","backgroundColor":"primary-200","className":"rosalie-section","style":{"spacing":{"padding":{"top":"var:preset|spacing|1000","right":"var:preset|spacing|600","bottom":"var:preset|spacing|1000","left":"var:preset|spacing|600"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-primary-200-background-color has-background rosalie-section" style="padding-top:var(--wp--preset--spacing--1000);padding-right:var(--wp--preset--spacing--600);padding-bottom:var(--wp--preset--spacing--1000);padding-left:var(--wp--preset--spacing--600)">
 
-	<!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|500","left":"var:preset|spacing|800"}}}} -->
-	<div class="wp-block-columns are-vertically-aligned-center">
+	<!-- wp:columns {"align":"wide","verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|500","left":"var:preset|spacing|800"}}}} -->
+	<div class="wp-block-columns alignwide are-vertically-aligned-center">
 
 		<!-- wp:column {"verticalAlignment":"center","width":"70%"} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:70%">

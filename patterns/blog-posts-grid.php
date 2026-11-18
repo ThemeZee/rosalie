@@ -9,7 +9,7 @@
 
 ?>
 
-<!-- wp:group {"align":"wide","className":"rosalie-section","style":{"border":{"top":{"color":"var:preset|color|primary-200","width":"1px"}},"spacing":{"padding":{"top":"var:preset|spacing|1000","bottom":"var:preset|spacing|1000"},"blockGap":"var:preset|spacing|600"}},"layout":{"type":"constrained","contentSize":"1040px","wideSize":"1040px"}} -->
+<!-- wp:group {"align":"wide","className":"rosalie-section","style":{"border":{"top":{"color":"var:preset|color|primary-200","width":"1px"}},"spacing":{"padding":{"top":"var:preset|spacing|1000","bottom":"var:preset|spacing|1000"},"blockGap":"var:preset|spacing|600"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide rosalie-section" style="border-top-color:var(--wp--preset--color--primary-200);border-top-width:1px;padding-top:var(--wp--preset--spacing--1000);padding-bottom:var(--wp--preset--spacing--1000)">
 
 	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|150"}},"layout":{"type":"constrained","contentSize":"640px"}} -->
@@ -26,8 +26,8 @@
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:query {"queryId":10,"query":{"perPage":6,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"displayLayout":{"type":"flex","columns":3}} -->
-	<div class="wp-block-query">
+	<!-- wp:query {"queryId":10,"query":{"perPage":6,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"displayLayout":{"type":"flex","columns":3},"align":"wide"} -->
+	<div class="wp-block-query alignwide">
 
 		<!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|600"}}} -->
 
@@ -58,8 +58,8 @@
 	</div>
 	<!-- /wp:query -->
 
-	<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|400"}}},"layout":{"type":"flex","justifyContent":"left"}} -->
-	<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--400)">
+	<!-- wp:buttons {"align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|400"}}},"layout":{"type":"flex","justifyContent":"left"}} -->
+	<div class="wp-block-buttons alignwide" style="margin-top:var(--wp--preset--spacing--400)">
 
 		<!-- wp:button -->
 		<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/blog/' ) ); ?>">Browse all stories</a></div>
