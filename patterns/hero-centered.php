@@ -12,12 +12,8 @@
 <!-- wp:group {"align":"full","className":"rosalie-section","style":{"spacing":{"padding":{"top":"var:preset|spacing|1000","right":"var:preset|spacing|400","bottom":"var:preset|spacing|1000","left":"var:preset|spacing|400"}}},"layout":{"type":"constrained","contentSize":"720px"}} -->
 <div class="wp-block-group alignfull rosalie-section" style="padding-top:var(--wp--preset--spacing--1000);padding-right:var(--wp--preset--spacing--400);padding-bottom:var(--wp--preset--spacing--1000);padding-left:var(--wp--preset--spacing--400)">
 
-	<!-- wp:paragraph {"align":"center","className":"is-style-overline"} -->
-	<p class="has-text-align-center is-style-overline">Stories from the Costiera</p>
-	<!-- /wp:paragraph -->
-
-	<!-- wp:heading {"textAlign":"center","level":1,"style":{"spacing":{"margin":{"top":"var:preset|spacing|300"}}},"fontSize":"display-xl"} -->
-	<h1 class="wp-block-heading has-text-align-center has-display-xl-font-size" style="margin-top:var(--wp--preset--spacing--300)">Find the quiet side of the coast</h1>
+	<!-- wp:heading {"textAlign":"center","level":1,"fontSize":"display-xl"} -->
+	<h1 class="wp-block-heading has-text-align-center has-display-xl-font-size">Find the quiet side of the coast</h1>
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"var:preset|spacing|300"}}},"fontSize":"body-lg"} -->

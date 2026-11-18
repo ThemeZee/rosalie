@@ -15,10 +15,6 @@
 	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|150"}},"layout":{"type":"constrained","contentSize":"640px"}} -->
 	<div class="wp-block-group">
 
-		<!-- wp:paragraph {"align":"center","className":"is-style-overline"} -->
-		<p class="has-text-align-center is-style-overline">Why the Amalfi Coast</p>
-		<!-- /wp:paragraph -->
-
 		<!-- wp:heading {"textAlign":"center","fontSize":"display"} -->
 		<h2 class="has-text-align-center has-display-font-size">Three good reasons to lose yourself here for a week.</h2>
 		<!-- /wp:heading -->

@@ -32,22 +32,6 @@ class BlockStyle {
 		);
 
 		register_block_style(
-			'core/paragraph',
-			array(
-				'name'  => 'overline',
-				'label' => __( 'Overline', 'rosalie' ),
-			)
-		);
-
-		register_block_style(
-			'core/heading',
-			array(
-				'name'  => 'overline',
-				'label' => __( 'Overline', 'rosalie' ),
-			)
-		);
-
-		register_block_style(
 			'core/social-links',
 			array(
 				'name'  => 'primary',

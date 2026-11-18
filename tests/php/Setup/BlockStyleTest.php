@@ -28,8 +28,6 @@ final class BlockStyleTest extends TestCase {
 		$this->assertSame(
 			array(
 				'core/navigation:main-navigation',
-				'core/paragraph:overline',
-				'core/heading:overline',
 				'core/social-links:primary',
 				'core/social-links:outline',
 				'core/post-terms:outline',

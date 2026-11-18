@@ -18,12 +18,8 @@
 		<!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%">
 
-			<!-- wp:paragraph {"className":"is-style-overline"} -->
-			<p class="is-style-overline">A Travel Magazine · The Amalfi Coast</p>
-			<!-- /wp:paragraph -->
-
-			<!-- wp:heading {"level":1,"style":{"spacing":{"margin":{"top":"var:preset|spacing|200"}}},"fontSize":"display-xl"} -->
-			<h1 class="wp-block-heading has-display-xl-font-size" style="margin-top:var(--wp--preset--spacing--200)">Slow days on a sunlit coast.</h1>
+			<!-- wp:heading {"level":1,"fontSize":"display-xl"} -->
+			<h1 class="wp-block-heading has-display-xl-font-size">Slow days on a sunlit coast.</h1>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"var:preset|spacing|300"}}},"fontSize":"body-lg"} -->

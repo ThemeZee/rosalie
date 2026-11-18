@@ -15,12 +15,8 @@
 	<!-- wp:group {"style":{"border":{"color":"var:preset|color|primary-200","width":"1px","radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|800","right":"var:preset|spacing|600","bottom":"var:preset|spacing|800","left":"var:preset|spacing|600"},"blockGap":"0"}},"backgroundColor":"primary-100","layout":{"type":"constrained","contentSize":"520px"}} -->
 	<div class="wp-block-group has-border-color has-primary-100-background-color has-background" style="border-color:var(--wp--preset--color--primary-200);border-width:1px;border-radius:12px;padding-top:var(--wp--preset--spacing--800);padding-right:var(--wp--preset--spacing--600);padding-bottom:var(--wp--preset--spacing--800);padding-left:var(--wp--preset--spacing--600)">
 
-		<!-- wp:paragraph {"align":"center","className":"is-style-overline"} -->
-		<p class="has-text-align-center is-style-overline">Join the list</p>
-		<!-- /wp:paragraph -->
-
-		<!-- wp:heading {"textAlign":"center","style":{"spacing":{"margin":{"top":"var:preset|spacing|200"}}},"fontSize":"display-sm"} -->
-		<h2 class="wp-block-heading has-text-align-center has-display-sm-font-size" style="margin-top:var(--wp--preset--spacing--200)">A postcard for your inbox.</h2>
+		<!-- wp:heading {"textAlign":"center","fontSize":"display-sm"} -->
+		<h2 class="wp-block-heading has-text-align-center has-display-sm-font-size">A postcard for your inbox.</h2>
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"var:preset|spacing|200"}}},"fontSize":"body-md"} -->

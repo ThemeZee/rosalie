@@ -15,10 +15,6 @@
 	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|150"}},"layout":{"type":"constrained","contentSize":"640px"}} -->
 	<div class="wp-block-group">
 
-		<!-- wp:paragraph {"align":"center","className":"is-style-overline"} -->
-		<p class="has-text-align-center is-style-overline">Meet the writers</p>
-		<!-- /wp:paragraph -->
-
 		<!-- wp:heading {"textAlign":"center","fontSize":"display-sm"} -->
 		<h2 class="wp-block-heading has-text-align-center has-display-sm-font-size">A small team who keep coming back to the coast.</h2>
 		<!-- /wp:heading -->

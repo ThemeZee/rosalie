@@ -18,10 +18,6 @@
 		<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|150"}},"layout":{"type":"constrained"}} -->
 		<div class="wp-block-group">
 
-			<!-- wp:paragraph {"className":"is-style-overline"} -->
-			<p class="is-style-overline">From the journal</p>
-			<!-- /wp:paragraph -->
-
 			<!-- wp:heading {"fontSize":"display-sm"} -->
 			<h2 class="has-display-sm-font-size">Latest stories</h2>
 			<!-- /wp:heading -->

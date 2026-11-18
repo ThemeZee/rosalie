@@ -18,12 +18,8 @@
 		<!-- wp:column {"verticalAlignment":"center","width":"70%"} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:70%">
 
-			<!-- wp:paragraph {"className":"is-style-overline"} -->
-			<p class="is-style-overline">The Coastal Dispatch</p>
-			<!-- /wp:paragraph -->
-
-			<!-- wp:heading {"style":{"spacing":{"margin":{"top":"var:preset|spacing|200"}}},"fontSize":"display-sm"} -->
-			<h2 class="wp-block-heading has-display-sm-font-size" style="margin-top:var(--wp--preset--spacing--200)">One good read, once a month.</h2>
+			<!-- wp:heading {"fontSize":"display-sm"} -->
+			<h2 class="wp-block-heading has-display-sm-font-size">One good read, once a month.</h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"var:preset|spacing|200"}}},"fontSize":"body-md"} -->

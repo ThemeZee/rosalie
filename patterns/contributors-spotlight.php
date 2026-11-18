@@ -12,10 +12,6 @@
 <!-- wp:group {"align":"wide","className":"rosalie-section","style":{"border":{"top":{"color":"var:preset|color|primary-200","width":"1px"}},"spacing":{"padding":{"top":"var:preset|spacing|1000","bottom":"var:preset|spacing|1000"},"blockGap":"var:preset|spacing|600"}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide rosalie-section" style="border-top-color:var(--wp--preset--color--primary-200);border-top-width:1px;padding-top:var(--wp--preset--spacing--1000);padding-bottom:var(--wp--preset--spacing--1000)">
 
-	<!-- wp:paragraph {"className":"is-style-overline"} -->
-	<p class="is-style-overline">Meet the editor</p>
-	<!-- /wp:paragraph -->
-
 	<!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|500","left":"var:preset|spacing|800"}}}} -->
 	<div class="wp-block-columns are-vertically-aligned-center">
 

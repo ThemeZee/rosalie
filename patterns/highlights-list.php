@@ -15,10 +15,6 @@
 	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|150"}},"layout":{"type":"constrained","contentSize":"640px"}} -->
 	<div class="wp-block-group">
 
-		<!-- wp:paragraph {"className":"is-style-overline"} -->
-		<p class="is-style-overline">What to expect</p>
-		<!-- /wp:paragraph -->
-
 		<!-- wp:heading {"fontSize":"display-sm"} -->
 		<h2 class="wp-block-heading has-display-sm-font-size">Everything you need to plan a slower trip.</h2>
 		<!-- /wp:heading -->

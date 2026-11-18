@@ -1,7 +1,7 @@
 // Pullquote — a big, upright display statement in the heavy Archivo grotesk,
 // set off by a solid ink rule above and below rather than sitting in a panel, so
 // it reads as a loud feature line (the reference's founder-statement voice). The
-// citation reuses the Overline eyebrow (muted, Figtree); `<cite>` is an inline
+// citation is a small, muted, uppercase Figtree eyebrow; `<cite>` is an inline
 // node with no block/element key, so it is set through `css`.
 module.exports = {
 	color: {

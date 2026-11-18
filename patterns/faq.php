@@ -15,10 +15,6 @@
 	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|150"}},"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group">
 
-		<!-- wp:paragraph {"className":"is-style-overline"} -->
-		<p class="is-style-overline">Good to know</p>
-		<!-- /wp:paragraph -->
-
 		<!-- wp:heading {"fontSize":"display-sm"} -->
 		<h2 class="wp-block-heading has-display-sm-font-size">Frequently asked questions</h2>
 		<!-- /wp:heading -->
